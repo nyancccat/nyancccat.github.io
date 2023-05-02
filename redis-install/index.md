@@ -160,7 +160,7 @@ systemctl status redis          # 查看状态
 
 下载地址: [Another-Redis-Desktop-Manager](https://github.com/qishibo/AnotherRedisDesktopManager/releases/)
 
-截个图：
+截个图 ：
 
 ![Another-Redis-Desktop-Manager](Another-Redis-Desktop-Manager.png "Another-Redis-Desktop-Manager")
 
