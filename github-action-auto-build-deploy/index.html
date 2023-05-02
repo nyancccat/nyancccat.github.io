@@ -14,9 +14,9 @@
 </span><span class=lnt>2
 </span><span class=lnt>3
 </span><span class=lnt>4
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>git add .
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>git add .
 </span></span><span class=line><span class=cl>git status
-</span></span><span class=line><span class=cl>git commit -m <span class=s2>&#34;xxx&#34;</span>
+</span></span><span class=line><span class=cl>git commit -m &#34;xxx&#34;
 </span></span><span class=line><span class=cl>git push
 </span></span></code></pre></td></tr></table></div></div><p>略为繁琐，虽然这几行命令可以写个脚本简化一下，但是只推送<code>.public</code>目录没有办法对本地源文件进行备份和版本管理，于是决定把源文件推送到仓库，触发 Github Action 构建生成静态文件。</p><h2 id=配置-github-action>配置 GitHub Action</h2><p>没有在原来项目上新建分支，而是新建了一个仓库用来管理源文件，Github Action 触发后生成静态文件推到原来的 GitHub Pages 项目。在这之前，需要在新建项目仓库设置下验证 key , 具体仓库页面 <code>Settings - secrets - Actions - New Repository secrets</code> 设置一下私钥就好了。</p><div class="details admonition note open"><div class="details-summary admonition-title"><i class="icon fa-solid fa-pencil-alt fa-fw" aria-hidden=true></i>注意<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden=true></i></div><div class=details-content><div class=admonition-content>名称注意和下面要设置的 <code>workflows</code> 配置一样，我的为 <code>ACTIONS_DEPLOY_KEY</code></div></div></div><p>然后本地 Hugo 博客目录新建<code>.github/workflows</code>下，配置以 .yml 后缀结尾，我的为<code>.github/workflows/deploy.yml</code>，编辑这个配置文件：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
 </span><span class=lnt> 2
@@ -98,18 +98,18 @@
 </span><span class=lnt> 8
 </span><span class=lnt> 9
 </span><span class=lnt>10
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl><span class=cp>#!/bin/bash
-</span></span></span><span class=line><span class=cl><span class=cp></span><span class=nb>echo</span> -e <span class=s2>&#34;Deploying...&#34;</span>
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>#!/bin/
+</span></span><span class=line><span class=cl>echo -e &#34;Deploying...&#34;
 </span></span><span class=line><span class=cl>git add .
 </span></span><span class=line><span class=cl>git status
-</span></span><span class=line><span class=cl><span class=nb>read</span> -p <span class=s2>&#34;Enter git commit message: &#34;</span> msg
-</span></span><span class=line><span class=cl><span class=k>if</span> <span class=o>[</span> -z <span class=nv>$msg</span> <span class=o>]</span><span class=p>;</span><span class=k>then</span>
-</span></span><span class=line><span class=cl>  <span class=nv>msg</span><span class=o>=</span><span class=s2>&#34;update </span><span class=k>$(</span>date +<span class=s1>&#39;%F %a %T&#39;</span><span class=k>)</span><span class=s2>&#34;</span>
-</span></span><span class=line><span class=cl><span class=k>fi</span>
-</span></span><span class=line><span class=cl>git commit -m <span class=s2>&#34;</span><span class=nv>$msg</span><span class=s2>&#34;</span>
+</span></span><span class=line><span class=cl>read -p &#34;Enter git commit message: &#34; msg
+</span></span><span class=line><span class=cl>if [ -z $msg ];then
+</span></span><span class=line><span class=cl>  msg=&#34;update $(date +&#39;%F %a %T&#39;)&#34;
+</span></span><span class=line><span class=cl>fi
+</span></span><span class=line><span class=cl>git commit -m &#34;$msg&#34;
 </span></span><span class=line><span class=cl>git push
 </span></span></code></pre></td></tr></table></div></div><p>保存为 deploy.sh ，终端切换到博客目录</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>sh deploy.sh
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>sh deploy.sh
 </span></span></code></pre></td></tr></table></div></div><p>输入 git- commit 信息即可。</p></div><div class=post-footer id=post-footer><div class=post-info><div class=post-info-line><div class=post-info-mod><span title="更新于 2022-09-29 19:17:40">更新于 2022-09-29&nbsp;</span></div><div class=post-info-license><span><a rel="license external nofollow noopener noreferrer" href=https://creativecommons.org/licenses/by-nc/4.0/ target=_blank>CC BY-NC 4.0</a></span></div></div><div class=post-info-line><div class=post-info-md><span><a href=/github-action-auto-build-deploy/index.md title=阅读原始文档 class=link-to-markdown>阅读原始文档</a></span></div><div class=post-info-share><span><a href=javascript:void(0); title="分享到 Twitter" data-sharer=twitter data-url=https://clearsky.me/github-action-auto-build-deploy/ data-title="GitHub Action 自动部署 Hugo 到 GitHub Pages" data-hashtags="GitHub Action,Hugo"><i class="fa-brands fa-twitter fa-fw" aria-hidden=true></i></a>
 <a href=javascript:void(0); title="分享到 Facebook" data-sharer=facebook data-url=https://clearsky.me/github-action-auto-build-deploy/ data-hashtag="GitHub Action"><i class="fa-brands fa-facebook-square fa-fw" aria-hidden=true></i></a>
 <a href=javascript:void(0); title="分享到 WhatsApp" data-sharer=whatsapp data-url=https://clearsky.me/github-action-auto-build-deploy/ data-title="GitHub Action 自动部署 Hugo 到 GitHub Pages" data-web><i class="fa-brands fa-whatsapp fa-fw" aria-hidden=true></i></a>
