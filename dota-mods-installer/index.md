@@ -29,6 +29,6 @@ TI7 刚落下帷幕，恭喜 Team Liquid 获得冠军，虽然中国队还是没
 
 ---
 
-> 作者: [u0defined](http://clearsky.me/)  
+> 作者: [pagezen](http://clearsky.me/)  
 > URL: https://clearsky.me/dota-mods-installer/  
 

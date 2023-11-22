@@ -206,6 +206,6 @@ screen -d -r yourname -> 结束当前session并回到yourname这个session
 
 ---
 
-> 作者: [u0defined](http://clearsky.me/)  
+> 作者: [pagezen](http://clearsky.me/)  
 > URL: https://clearsky.me/jd-autobuy/  
 

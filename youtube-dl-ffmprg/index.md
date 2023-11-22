@@ -107,6 +107,6 @@ youtube-dl 就用下载这两个视频和音频并调用 FFmpeg 合成为一个�
 
 ---
 
-> 作者: [u0defined](http://clearsky.me/)  
+> 作者: [pagezen](http://clearsky.me/)  
 > URL: https://clearsky.me/youtube-dl-ffmprg/  
 

@@ -215,6 +215,6 @@ cd certbot && openssl dhparam -out /etc/nginx/ssl/dhparam.pem 2048 && /etc/init.
 
 ---
 
-> 作者: [u0defined](http://clearsky.me/)  
+> 作者: [pagezen](http://clearsky.me/)  
 > URL: https://clearsky.me/lets-encrypt/  
 

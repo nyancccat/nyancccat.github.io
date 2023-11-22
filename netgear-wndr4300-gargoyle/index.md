@@ -67,6 +67,6 @@ OpenWrt官方包有点小问题，还是决定刷个第三方固件石像鬼，�
 
 ---
 
-> 作者: [u0defined](http://clearsky.me/)  
+> 作者: [pagezen](http://clearsky.me/)  
 > URL: https://clearsky.me/netgear-wndr4300-gargoyle/  
 

@@ -51,6 +51,6 @@ ABS 为常用工程塑料，成本较 PBT 低，一般会便宜一点。但是�
 
 ---
 
-> 作者: [u0defined](http://clearsky.me/)  
+> 作者: [pagezen](http://clearsky.me/)  
 > URL: https://clearsky.me/taihao-keycaps/  
 

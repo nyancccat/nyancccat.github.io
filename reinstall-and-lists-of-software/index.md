@@ -135,6 +135,6 @@ ftp工具是FileZilla，有时候又混着用flashfxp，这个比较随意。
 
 ---
 
-> 作者: [u0defined](http://clearsky.me/)  
+> 作者: [pagezen](http://clearsky.me/)  
 > URL: https://clearsky.me/reinstall-and-lists-of-software/  
 

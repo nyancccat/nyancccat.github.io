@@ -70,6 +70,6 @@ Softlayer, HongKong, CN         119.81.130.170          405KB/s
 
 ---
 
-> 作者: [u0defined](http://clearsky.me/)  
+> 作者: [pagezen](http://clearsky.me/)  
 > URL: https://clearsky.me/fuck-bandwagonhost-again/  
 

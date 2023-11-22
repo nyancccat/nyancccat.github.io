@@ -87,6 +87,6 @@ add_action('admin_print_footer_scripts', 'mxthemes_add_quicktags' );
 
 ---
 
-> 作者: [u0defined](http://clearsky.me/)  
+> 作者: [pagezen](http://clearsky.me/)  
 > URL: https://clearsky.me/prism/  
 

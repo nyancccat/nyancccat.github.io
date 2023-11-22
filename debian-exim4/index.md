@@ -70,6 +70,6 @@ rm /var/log/exim4/paniclog #删除log。
 
 ---
 
-> 作者: [u0defined](http://clearsky.me/)  
+> 作者: [pagezen](http://clearsky.me/)  
 > URL: https://clearsky.me/debian-exim4/  
 

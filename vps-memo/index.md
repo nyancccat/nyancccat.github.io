@@ -109,6 +109,6 @@ ps -aux | grep nginx  /*在所有进程中，查找nginx的进程*/
 
 ---
 
-> 作者: [u0defined](http://clearsky.me/)  
+> 作者: [pagezen](http://clearsky.me/)  
 > URL: https://clearsky.me/vps-memo/  
 
