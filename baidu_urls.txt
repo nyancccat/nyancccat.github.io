@@ -69,4 +69,5 @@ https://clearsky.me/recently/
 https://clearsky.me/untitled/
 https://clearsky.me/martinniemoller/
 https://clearsky.me/hello-world/
+https://clearsky.me/toot/
 https://clearsky.me/about/
