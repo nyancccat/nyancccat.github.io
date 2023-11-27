@@ -18,7 +18,8 @@ html[data-theme='light'] {
     --link-color: #3a3bff;
     --error-text-color: #8b0000;
 }
-html[data-theme='dark'] {
+:root,
+html,body[data-theme='dark'] {
     --bg-color: #282c37;
     --bg-hover-color: #313543;
     --line-gray-color: #393f4f;

@@ -790,31 +790,34 @@ MastodonApi.prototype.placePreviewLink = function (c) {
  * @returns {string} Date formated (MM DD, YYYY)
  */
 MastodonApi.prototype.formatDate = function (d) {
-    const monthNames = [
-        "Jan",
-        "Feb",
-        "Mar",
-        "Apr",
-        "May",
-        "Jun",
-        "Jul",
-        "Aug",
-        "Sep",
-        "Oct",
-        "Nov",
-        "Dec",
-    ];
+    // const monthNames = [
+    //     "Jan",
+    //     "Feb",
+    //     "Mar",
+    //     "Apr",
+    //     "May",
+    //     "Jun",
+    //     "Jul",
+    //     "Aug",
+    //     "Sep",
+    //     "Oct",
+    //     "Nov",
+    //     "Dec",
+    // ];
 
-    const date = new Date(d);
+    let date = new Date(d);
 
-    const displayDate =
-        monthNames[date.getMonth()] +
-        " " +
-        date.getDate() +
-        ", " +
-        date.getFullYear();
+    // const displayDate =
+    //     monthNames[date.getMonth()] +
+    //     " " +
+    //     date.getDate() +
+    //     ", " +
+    //     date.getFullYear();
 
-    return displayDate;
+    // return displayDate;
+    let displayDateTwitter = moment(date).twitterLong();
+
+    return displayDateTwitter;
 };
 
 /**
