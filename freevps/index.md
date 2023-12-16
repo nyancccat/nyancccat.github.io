@@ -122,6 +122,6 @@ dd if=/dev/zero of=test bs=64k count=512 oflag=dsync</pre>
 
 ---
 
-> 作者: [pagezen](http://clearsky.me/)  
+> 作者: Anonymous  
 > URL: https://clearsky.me/freevps/  
 

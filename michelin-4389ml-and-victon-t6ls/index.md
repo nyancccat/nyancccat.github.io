@@ -88,6 +88,6 @@
 
 ---
 
-> 作者: [pagezen](http://clearsky.me/)  
+> 作者: Anonymous  
 > URL: https://clearsky.me/michelin-4389ml-and-victon-t6ls/  
 

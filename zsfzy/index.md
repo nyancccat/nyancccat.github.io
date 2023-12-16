@@ -18,6 +18,6 @@
 
 ---
 
-> 作者: [pagezen](http://clearsky.me/)  
+> 作者: Anonymous  
 > URL: https://clearsky.me/zsfzy/  
 

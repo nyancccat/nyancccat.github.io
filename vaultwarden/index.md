@@ -163,6 +163,6 @@ Vaultwarden 可完美兼容 Bitwarden 全平台客户端。所以直接使用 Bi
 
 ---
 
-> 作者: [pagezen](http://clearsky.me/)  
+> 作者: Anonymous  
 > URL: https://clearsky.me/vaultwarden/  
 

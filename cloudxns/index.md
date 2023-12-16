@@ -73,6 +73,6 @@ X优化是一种智能托管解析服务
 
 ---
 
-> 作者: [pagezen](http://clearsky.me/)  
+> 作者: Anonymous  
 > URL: https://clearsky.me/cloudxns/  
 

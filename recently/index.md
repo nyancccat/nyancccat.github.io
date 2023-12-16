@@ -21,6 +21,6 @@ TBBT 似乎在 9 月 27 号开播，还有十多天，安心等待。
 
 ---
 
-> 作者: [pagezen](http://clearsky.me/)  
+> 作者: Anonymous  
 > URL: https://clearsky.me/recently/  
 

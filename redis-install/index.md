@@ -171,6 +171,6 @@ systemctl status redis          # 查看状态
 
 ---
 
-> 作者: [pagezen](http://clearsky.me/)  
+> 作者: Anonymous  
 > URL: https://clearsky.me/redis-install/  
 

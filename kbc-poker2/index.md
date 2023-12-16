@@ -58,6 +58,6 @@ x宝上逛了一圈，基本上都是一个价，随便找了家信誉不错的�
 
 ---
 
-> 作者: [pagezen](http://clearsky.me/)  
+> 作者: Anonymous  
 > URL: https://clearsky.me/kbc-poker2/  
 

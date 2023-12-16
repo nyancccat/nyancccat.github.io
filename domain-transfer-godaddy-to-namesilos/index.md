@@ -84,6 +84,6 @@ Namesilo 查看转入信息，已经有确认邮件发出。
 
 ---
 
-> 作者: [pagezen](http://clearsky.me/)  
+> 作者: Anonymous  
 > URL: https://clearsky.me/domain-transfer-godaddy-to-namesilos/  
 

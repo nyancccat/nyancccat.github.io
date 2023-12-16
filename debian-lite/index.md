@@ -41,6 +41,6 @@ apt-get autoremove && apt-get clean
 
 ---
 
-> 作者: [pagezen](http://clearsky.me/)  
+> 作者: Anonymous  
 > URL: https://clearsky.me/debian-lite/  
 
