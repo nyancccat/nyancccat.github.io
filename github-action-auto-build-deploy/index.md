@@ -110,6 +110,6 @@ sh deploy.sh
 
 ---
 
-> 作者: Anonymous  
+> 作者: [pagezen](http://clearsky.me/)  
 > URL: https://clearsky.me/github-action-auto-build-deploy/  
 

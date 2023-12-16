@@ -59,6 +59,6 @@ CPU  (英特尔)Intel(R) Core(TM) i5-3210M CPU @ 2.50GHz(2501 MHz)
 
 ---
 
-> 作者: Anonymous  
+> 作者: [pagezen](http://clearsky.me/)  
 > URL: https://clearsky.me/y480/  
 

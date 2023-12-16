@@ -13,6 +13,6 @@ WordPress 转 Hexo 后评论都没了，但是数据我会一直保留着，或�
 
 ---
 
-> 作者: Anonymous  
+> 作者: [pagezen](http://clearsky.me/)  
 > URL: https://clearsky.me/hello-hexo/  
 

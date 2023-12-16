@@ -169,6 +169,6 @@ UPDATE wp_comments SET comment_content = REPLACE( comment_content, 'http://examp
 
 ---
 
-> 作者: Anonymous  
+> 作者: [pagezen](http://clearsky.me/)  
 > URL: https://clearsky.me/startssl-https/  
 

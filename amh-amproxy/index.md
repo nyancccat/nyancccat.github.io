@@ -125,6 +125,6 @@ amh module AMProxy-1.0 install;
 
 ---
 
-> 作者: Anonymous  
+> 作者: [pagezen](http://clearsky.me/)  
 > URL: https://clearsky.me/amh-amproxy/  
 

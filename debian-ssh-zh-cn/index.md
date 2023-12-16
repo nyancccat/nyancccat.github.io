@@ -51,6 +51,6 @@ LC_CTYPE="zh_CN.UTF-8"
 
 ---
 
-> 作者: Anonymous  
+> 作者: [pagezen](http://clearsky.me/)  
 > URL: https://clearsky.me/debian-ssh-zh-cn/  
 

@@ -114,6 +114,6 @@ Below is a rendering of the page up to the first error.
 
 ---
 
-> 作者: Anonymous  
+> 作者: [pagezen](http://clearsky.me/)  
 > URL: https://clearsky.me/hexo-upgrade-to-3.2.2/  
 

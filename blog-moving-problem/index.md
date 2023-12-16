@@ -42,6 +42,6 @@ ini_set("error_reporting","E_ALL & ~E_NOTICE");
 
 ---
 
-> 作者: Anonymous  
+> 作者: [pagezen](http://clearsky.me/)  
 > URL: https://clearsky.me/blog-moving-problem/  
 

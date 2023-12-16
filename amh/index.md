@@ -149,6 +149,6 @@ wget http://amysql.com/file/AMH/3.0/amh.sh; chmod 775 amh.sh; ./amh.sh 2>&1 | te
 
 ---
 
-> 作者: Anonymous  
+> 作者: [pagezen](http://clearsky.me/)  
 > URL: https://clearsky.me/amh/  
 

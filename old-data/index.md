@@ -39,6 +39,6 @@ WHERE c.taxonomy = 'post_tag' AND c.count = 0
 
 ---
 
-> 作者: Anonymous  
+> 作者: [pagezen](http://clearsky.me/)  
 > URL: https://clearsky.me/old-data/  
 

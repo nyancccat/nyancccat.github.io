@@ -30,6 +30,6 @@ DirectAdmin中文面板PHP+MySQL
 
 ---
 
-> 作者: Anonymous  
+> 作者: [pagezen](http://clearsky.me/)  
 > URL: https://clearsky.me/blog-moving-again/  
 
