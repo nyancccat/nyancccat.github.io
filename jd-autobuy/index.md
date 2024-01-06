@@ -24,10 +24,10 @@
 
 最反感这种抢购的，没时间守着抢，都不打算买了，但是还是忍不住，于是网上找了 Python 爬虫，项目地址在这里：[JD_AutoBuy - Python爬虫，京东自动登录，在线抢购商品](https://github.com/Adyzng/jd-autobuy)，看了下说明，使用环境 Python 2.7。还需要两个库：
 
-{{< admonition info >}}
+{{&lt; admonition info &gt;}}
 - Requests: 简单好用，功能强大的Http请求库
 - beautifulsoup4: HTML文档格式化及便签选择器
-{{< /admonition >}}
+{{&lt; /admonition &gt;}}
 
 
 刚好我使用的 VPS 系统是 Debian ，自带的 Python 版本就是 2.7（本来想着在本地电脑上运行的，但是我没事不可能一直开着电脑挂着，还是在服务器上运行吧）。
@@ -99,12 +99,12 @@ optional arguments:
 
 ```
 -a, -area string
-        ship location string, default to Beijing (default "1_72_2799_0") // 设置商品区域 默认北京地区
+        ship location string, default to Beijing (default &#34;1_72_2799_0&#34;) // 设置商品区域 默认北京地区
 ```
 
 **首先：`-u` 和 `-p` 这两个参数基本用不到，因为这个脚本支持扫码登陆，不用去填账号和密码。**
 
-然后： `-g` 参数后加的是商品 id，就是商品页面浏览器地址栏那串数字，比如我要抢的`华为 P20 Pro 6GB + 128 G 极光色` 的 id 为 `6946625`,据说购物商城比较鸡贼，这个 id 会变，防止软件刷自动抢购，不过我看了京东没变过。
+然后： `-g` 参数后加的是商品 id，就是商品页面浏览器地址栏那串数字，比如我要抢的`华为 P20 Pro 6GB &#43; 128 G 极光色` 的 id 为 `6946625`,据说购物商城比较鸡贼，这个 id 会变，防止软件刷自动抢购，不过我看了京东没变过。
 
 再然后：`-c` 这个没什么好说的，购买数量，买一件后面加 1，买两件加 2。
 
@@ -114,15 +114,15 @@ optional arguments:
 
 最后说说这个 `-a` 设置商品区域（默认北京地区），这个值在怎么填，可以先选择配送地，比如我的：
 
-![京东配送地址截图](jd-s.jpg "京东配送地址截图")
+![京东配送地址截图](jd-s.jpg &#34;京东配送地址截图&#34;)
 
 用 Chrome 浏览器的话，就可以直接 F12 页面检查，先切到 `Network`,然后在过滤器上输入 `stock`,最后得出的 `area` 后面的那串数字就是了,如图：
 
-![京东配送地址截图](jd-f12.jpg "京东配送地址截图")
+![京东配送地址截图](jd-f12.jpg &#34;京东配送地址截图&#34;)
 
 这样，我们所需要的参数都有了，完整举个例子：
 
-比如我要抢购 数量为 `1` 台的 华为 P20 Pro 6GB + 128 G 极光色，他的商品id 为 `6946625`，配送区域广西柳州市XXXXXX。区域 id 为 `20_1720_3659_0` ，没货刷新直至有货，有货之后添到购物车并且提交。那么可以这样运行脚本：
+比如我要抢购 数量为 `1` 台的 华为 P20 Pro 6GB &#43; 128 G 极光色，他的商品id 为 `6946625`，配送区域广西柳州市XXXXXX。区域 id 为 `20_1720_3659_0` ，没货刷新直至有货，有货之后添到购物车并且提交。那么可以这样运行脚本：
 
 ```python
 python scraper-jd.py -c 1 -g 6946625 -a 20_1720_3659_0 -f -s
@@ -160,10 +160,10 @@ python scraper-jd.py -c 1 -g 6946625 -a 20_1720_3659_0 -f -s
 
 遇到的2个问题：
 
-{{< admonition question >}}
+{{&lt; admonition question &gt;}}
 - 有时候第一次登陆会要验证，把终端验证那一串地址在浏览器打开，接受个手机验证码就可以了。
 - 我试了买了一个胎压计，然后再买其他商品就添加不上购物车或者下不了订单了。只能没买完一个商品，把脚本同级目录下的 Cookie 文件删除，然后重新扫码登陆一遍就可以了。
-{{< /admonition >}}
+{{&lt; /admonition &gt;}}
 
 还有，开了 screen 后就可以断开 ssh 连接了，下一次登陆终端，想恢复到脚本界面，用：
 
@@ -174,23 +174,23 @@ screen -r jd_autobuy
 附 screen 常用命令：
 
 ```bash
-screen -S yourname -> 新建一个叫yourname的session
-screen -ls -> 列出当前所有的session
-screen -r yourname -> 回到yourname这个session
-screen -d yourname -> 远程detach某个session
-screen -d -r yourname -> 结束当前session并回到yourname这个session
+screen -S yourname -&gt; 新建一个叫yourname的session
+screen -ls -&gt; 列出当前所有的session
+screen -r yourname -&gt; 回到yourname这个session
+screen -d yourname -&gt; 远程detach某个session
+screen -d -r yourname -&gt; 结束当前session并回到yourname这个session
 ```
 
 ## 运行界面
 
 最后最后，动图流：
 
-![脚本运行界面](jd_autobuy.gif "脚本运行界面")
+![脚本运行界面](jd_autobuy.gif &#34;脚本运行界面&#34;)
 
 2018.05.09 更新: 一觉醒来可还是没有刷到，TMD 刷不到不买了，给惯的！
 2018.05.10 更新：晚上和朋友在吃烧烤，突然手机京东通知来了，已提交到订单：
 
-![刷到订单了](dd.jpg "刷到订单了")
+![刷到订单了](dd.jpg &#34;刷到订单了&#34;)
 
 ## 到货
 
@@ -198,11 +198,11 @@ screen -d -r yourname -> 结束当前session并回到yourname这个session
 
 到货了：
 
-![到货了](p20-pro.jpg "到货了")
+![到货了](p20-pro.jpg &#34;到货了&#34;)
 
 晚上吃宵夜，随便拍了一张，我真的不会拍照，原谅选了这么一个地方，不过照片的色调和拍摄夜景能力真的非常不错的。
 
-![随拍](suipai.jpg "随拍")
+![随拍](suipai.jpg &#34;随拍&#34;)
 
 ---
 

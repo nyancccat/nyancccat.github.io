@@ -19,7 +19,7 @@
 |     Order KVM     |       √       |
 |   Monthly Price   |     $2.99     |
 
-![pay-banwagong](pay-banwagong.png "pay-banwagong")
+![pay-banwagong](pay-banwagong.png &#34;pay-banwagong&#34;)
 
 ## 简单测试
 
@@ -62,7 +62,7 @@ Softlayer, HongKong, CN         119.81.130.170          405KB/s
 
 路由跟踪，绕了一圈没看明白。。。不管了。
 
-![trace-banwagonhost](trace-banwagonhost.png "trace-banwagonhost")
+![trace-banwagonhost](trace-banwagonhost.png &#34;trace-banwagonhost&#34;)
 
 ## 结束
 

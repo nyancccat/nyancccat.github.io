@@ -17,9 +17,9 @@ total       used       free     shared    buffers     cached
 
 Mem:           128         84         43          0          0         61
 
--/+ buffers/cache:         22        105
+-/&#43; buffers/cache:         22        105
 
-Swap:          128         26        101</div>
+Swap:          128         26        101&lt;/div&gt;
 ```
 ### 下载测试
 
@@ -27,7 +27,7 @@ Swap:          128         26        101</div>
 wget http://cachefly.cachefly.net/100mb.test
 ```
 
-{{< admonition info >}}
+{{&lt; admonition info &gt;}}
 --2012-09-30 14:11:16--  http://cachefly.cachefly.net/100mb.test
 
 Resolving cachefly.cachefly.net... 205.234.175.175
@@ -40,10 +40,10 @@ Length: 104857600 (100M) [application/octet-stream]
 
 Saving to: ?.00mb.test?
 
-100%[================================================>] 104,857,600 14.5M/s   in 10s
+100%[================================================&gt;] 104,857,600 14.5M/s   in 10s
 
 2012-09-30 14:11:27 (9.82 MB/s) - ?.00mb.test?.saved [104857600/104857600]
-{{< /admonition >}}
+{{&lt; /admonition &gt;}}
 
 
 ### CPU
@@ -51,7 +51,7 @@ Saving to: ?.00mb.test?
 ```bash
 cat /proc/cpuinfo
 ```
-{{< admonition info >}}
+{{&lt; admonition info &gt;}}
 processor	: 0
 
 vendor_id	: AuthenticAMD
@@ -101,14 +101,14 @@ cache_alignment	: 64
 address sizes	: 40 bits physical, 48 bits virtual
 
 power management:
-{{< /admonition >}}
+{{&lt; /admonition &gt;}}
 
 ### 硬盘性能
 
 太差了~
 
 ```bash
-dd if=/dev/zero of=test bs=64k count=512 oflag=dsync</pre>
+dd if=/dev/zero of=test bs=64k count=512 oflag=dsync&lt;/pre&gt;
 ```
 
 卡住好久，懒得贴了。

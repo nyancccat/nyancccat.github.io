@@ -17,39 +17,39 @@ Prism官网点这里：[Prism.com](http://prismjs.com/)
 
 官网上有六款风格可以选择，我是直接用默认的，感觉比较舒服。
 
-![Prism.js主题](prism-theme.png "Prism.js主题")
+![Prism.js主题](prism-theme.png &#34;Prism.js主题&#34;)
 
 下面是选着语言支持，当然你选着越多后面生成的js和css也越大，看自己需求选择。
 
-![Prism.js语言支持](prism-languages.png "Prism.js语言支持")
+![Prism.js语言支持](prism-languages.png &#34;Prism.js语言支持&#34;)
 
 再下面是插件支持，也是看需求，我就选了显示行号和显示语言。
 
-![Prism.js插件](prism-plugins.png "Prism.js插件")
+![Prism.js插件](prism-plugins.png &#34;Prism.js插件&#34;)
 
 然后下载直接生成好的`prism.js`和`prism.css`文件就可以。
 
 把这两个文件上传到到网站目录，在网站`head`插入`prism.js`和`prism.css`：
 
 ```html
-<link href="prism.css" rel="stylesheet" />;
-<script src="prism.js"></script>;
+&lt;link href=&#34;prism.css&#34; rel=&#34;stylesheet&#34; /&gt;;
+&lt;script src=&#34;prism.js&#34;&gt;&lt;/script&gt;;
 /*改一下上传文件的路径*/
 ```
 
 Wordpress撰写文章的时候编辑器里面使用下面的格式就可以高亮代码了：
 
 ```html
-<pre><code class="language-X">...这里是代码...</code></pre>
+&lt;pre&gt;&lt;code class=&#34;language-X&#34;&gt;...这里是代码...&lt;/code&gt;&lt;/pre&gt;
 ```
 上面的`X`表示语言类型，比如`language-css`。
 
 如果你选择了行号插件，要显示的话，`pre`标签里面加个class`line-numbers`，像这样：
 
 ```bash
-<pre class="line-numbers">
-    <code class="language-X">...这里是代码...</code>
-</pre>
+&lt;pre class=&#34;line-numbers&#34;&gt;
+    &lt;code class=&#34;language-X&#34;&gt;...这里是代码...&lt;/code&gt;
+&lt;/pre&gt;
 ```
 至于其它的功能比如行高亮之类，可以参考[官方文档。](http://prismjs.com/examples.html)
 
@@ -58,12 +58,12 @@ Wordpress撰写文章的时候编辑器里面使用下面的格式就可以高�
 主题`function.php`放上这一堆：
 
 ```php
-function mxthemes_add_quicktags() { ?>
-<script type="text/javascript">
-QTags.addButton( 'Prism', 'Prism', '\n<pre><code class="language-php">', '</code></pre>\n' ); //快捷输入[Prism]标签
-</script>
-<?php }
-add_action('admin_print_footer_scripts', 'mxthemes_add_quicktags' );
+function mxthemes_add_quicktags() { ?&gt;
+&lt;script type=&#34;text/javascript&#34;&gt;
+QTags.addButton( &#39;Prism&#39;, &#39;Prism&#39;, &#39;\n&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&#39;, &#39;&lt;/code&gt;&lt;/pre&gt;\n&#39; ); //快捷输入[Prism]标签
+&lt;/script&gt;
+&lt;?php }
+add_action(&#39;admin_print_footer_scripts&#39;, &#39;mxthemes_add_quicktags&#39; );
 ```
 
 这样后台编辑器就多了个按钮(文本模式下)，我是没有用这个，感觉多敲两下键盘也没什么。
@@ -74,9 +74,9 @@ add_action('admin_print_footer_scripts', 'mxthemes_add_quicktags' );
 
 ## 乱七八糟
 
-1. `Prism.js` 用`pre > code`这样使用语义化元素来标记代码区块是非常不错的，就是我自己喜欢用code来强调一些关键词，比如：`fuckwall`，定义这样的样式就和prism.css有点冲突了，所以主题style.css里面的code样式改一下，用`:not`选择器：
+1. `Prism.js` 用`pre &gt; code`这样使用语义化元素来标记代码区块是非常不错的，就是我自己喜欢用code来强调一些关键词，比如：`fuckwall`，定义这样的样式就和prism.css有点冲突了，所以主题style.css里面的code样式改一下，用`:not`选择器：
 ```css
-:not(pre) > code {
+:not(pre) &gt; code {
     ...样式...
 }
 ```

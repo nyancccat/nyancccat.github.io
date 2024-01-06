@@ -3,9 +3,9 @@
 
 ## 关于我
 
-{{< admonition type=abstract title="关于我" open=true >}}
+{{&lt; admonition type=abstract title=&#34;关于我&#34; open=true &gt;}}
 
-<img src='/avatar.jpg' align='right' style=' width:100px;height:100px;border-radius:6px;'/>
+&lt;img src=&#39;/avatar.jpg&#39; align=&#39;right&#39; style=&#39; width:100px;height:100px;border-radius:6px;&#39;/&gt;
 
 80 后，男，已婚，育有一子。
 
@@ -14,11 +14,11 @@
 感兴趣的事情，熬到多晚就就会折腾，为了那一丝成就感，哪怕这成就感在别人眼中多么的微不足道。
 
 大学财务管理专业，但对不住老师，经常逃课在图书馆呆一整天看杂书，虽然所学到的对现在没什么帮助，但我常常怀念那段日子，认为图书馆窗里窗外是两个不同的世界。
-{{< /admonition >}}
+{{&lt; /admonition &gt;}}
 
 ## 关于这里
 
-{{< admonition type=note title="建站记录" open=false >}}
+{{&lt; admonition type=note title=&#34;建站记录&#34; open=false &gt;}}
 
 2005 – 2009 年大学期间，沉迷网络，网吧通宵的时候误入一个讨论免费虚拟主机的论坛，[Google](https://google.com) 了半天，终于上传了一个 index.html，从此混迹于各种资源论坛，学到很多，但学得很杂，半吊子水平。
 
@@ -46,27 +46,27 @@
 
 2023 年，未来还在继续。。。
 
-{{< /admonition >}}
+{{&lt; /admonition &gt;}}
 
-{{< admonition type=info title="免责声明" open=true >}}
+{{&lt; admonition type=info title=&#34;免责声明&#34; open=true &gt;}}
 
 请注意，这是个人站点，在这里发表的评论将被记录，所以请不要张贴任何隐私的信息，并且发表言论请遵守中华人民共和国及其它国家和地区的相关法律法规。
 
 本站可能存在引用、摘录或转载来自第三方的文字、图片、视频等内容，使用这些第三方内容是出于传递更多信息之目的，并不意味着赞同其观点或认可其真实性。亦不保证内容的准确性、安全性和完整性，请您在阅读、下载及使用过程中自行确认，本站亦不承担上述资源对您或您的网站造成的任何形式的损失或伤害。
 
-{{< /admonition >}}
+{{&lt; /admonition &gt;}}
 
-{{< admonition type=warning title="版权声明" open=true >}}
+{{&lt; admonition type=warning title=&#34;版权声明&#34; open=true &gt;}}
 
 除特殊声明外，本站遵循 [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/) 协议。
 
 您可以自由地共享以及演绎，但是必须署名并以相同方式共享。
 
-{{< /admonition >}}
+{{&lt; /admonition &gt;}}
 
 ## 联系方式
 
-{{< admonition type=tip title="联系方式" open=true >}}
+{{&lt; admonition type=tip title=&#34;联系方式&#34; open=true &gt;}}
 
 ~~不太使用即时通讯软件与陌生人交流，原因可以看看知乎上的这个问答：[为什么很多人用电子邮件交流，而不是即时通讯软件（如 QQ 、MSN 等）？](https://www.zhihu.com/question/20409003)~~
 
@@ -76,7 +76,7 @@ TG: [@pagezen](https://t.me/pagezen)
 
 E-MAIL: `aUBjbGVhcnNreS5tZWlAY2xlYXJza3kubWU=` (base 64)
 
-{{< /admonition >}}
+{{&lt; /admonition &gt;}}
 
 
 ---

@@ -8,16 +8,16 @@
 后台安装完成后更新完系统后，安装宝塔面板：
 
 ```bash
-wget -O install.sh http://download.bt.cn/install/install-ubuntu_6.0.sh && sudo bash install.sh
+wget -O install.sh http://download.bt.cn/install/install-ubuntu_6.0.sh &amp;&amp; sudo bash install.sh
 ```
 
 ## 报错 1
 
 安装失败，报错：
 
-{{< admonition question >}}
+{{&lt; admonition question &gt;}}
 Pillow installation failed
-{{< /admonition >}}
+{{&lt; /admonition &gt;}}
 
 搜了下大致与 Python 有关，于是直接安装 `python-setuptools` 工具：
 
@@ -57,28 +57,28 @@ Starting Bt-Tasks... done
 ## 安装魔改版 BBR
 
 
-Ubuntu 18.04 内核 为 `4.15`，高于 BBR 内核要求为 `4.9` 以上，所以不用换内核了。直接使用大佬魔改版本 [BBR+BBR魔改+Lotsever(锐速)一键脚本 for Centos/Debian/Ubuntu](https://www.moerats.com/archives/387/) 
+Ubuntu 18.04 内核 为 `4.15`，高于 BBR 内核要求为 `4.9` 以上，所以不用换内核了。直接使用大佬魔改版本 [BBR&#43;BBR魔改&#43;Lotsever(锐速)一键脚本 for Centos/Debian/Ubuntu](https://www.moerats.com/archives/387/) 
 
 Ubuntu 18.04 使用下面：
 
 ```bash
-wget -N --no-check-certificate "https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh"
+wget -N --no-check-certificate &#34;https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh&#34;
 apt install make gcc -y
-sed -i 's#/usr/bin/gcc-4.9#/usr/bin/gcc#g' '/root/tcp.sh'
-chmod +x tcp.sh && ./tcp.sh
+sed -i &#39;s#/usr/bin/gcc-4.9#/usr/bin/gcc#g&#39; &#39;/root/tcp.sh&#39;
+chmod &#43;x tcp.sh &amp;&amp; ./tcp.sh
 ```
 
 完成后按提示选择就行了，如图：
 
-![安装魔改 BBR](mgbbr.jpg "安装魔改 BBR")
+![安装魔改 BBR](mgbbr.jpg &#34;安装魔改 BBR&#34;)
 
 安装过程出现下图：选择 `NO`。
 
-![安装过程提示](bbraz.png "安装过程提示")
+![安装过程提示](bbraz.png &#34;安装过程提示&#34;)
 
 安装 `不可描述软件` 之后，喜闻乐见的油管动图测速：
 
-![油管水量惊人](ygcs.gif "油管水量惊人")
+![油管水量惊人](ygcs.gif &#34;油管水量惊人&#34;)
 
 油管非高峰期，1440P 下这个速度非常满意了。
 

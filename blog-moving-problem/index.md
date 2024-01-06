@@ -16,26 +16,26 @@ ps:我在虚拟主机后台面板没有找到修改PHP配置的地方，我记�
 **第一种：修改php.in**
 
 
-{{< admonition tip >}}
+{{&lt; admonition tip &gt;}}
 1. error_reporting设置：
 
 找到`error_reporting = E_ALL`
 
-修改为`error_reporting = E_ALL & ~E_NOTICE`
+修改为`error_reporting = E_ALL &amp; ~E_NOTICE`
 
 2. register_globals设置：
 
 找到`register_globals = Off`
 
 修改为`register_globals = On`
-{{< /admonition >}}
+{{&lt; /admonition &gt;}}
 
 **第二种：php代码添加**
 
 因为不止是单个页面出现这种警告，所以我把代码加在`header.php`，通杀。
 
 ```php
-ini_set("error_reporting","E_ALL & ~E_NOTICE");
+ini_set(&#34;error_reporting&#34;,&#34;E_ALL &amp; ~E_NOTICE&#34;);
 ```
 刷新页面，解决了。
 

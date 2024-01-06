@@ -21,7 +21,7 @@
 | Processor |  x64, 1.4GHz | x64, 2GHz dual core |
 | Memory | 2GB RAM | 4GB RAM |
 | Storage | 12GB  | 25GB |
-| Docker Version | Engine 19+ and Compose 1.24+ | Engine 19+ and Compose 1.24+ |
+| Docker Version | Engine 19&#43; and Compose 1.24&#43; | Engine 19&#43; and Compose 1.24&#43; |
 
 再看看我手头上这台 VPS，1 核 1G 内存，硬盘才 16G，安装这个这个怕是太勉强了，果断放弃。
 
@@ -48,7 +48,7 @@ Vaultwarden 是一个使用 Rust 编写的非官方 Bitwarden 服务器实现，
 
 我本身用着 1Panel 面板，直接新添加一个网站，绑定域名，如 `vw.yourdomain.com`,类型选择反向代理，代理端口 8087 （这个随意设置）。
 
-![反向代理设置](Reverse_proxy.webp 'Reverse_proxy')
+![反向代理设置](Reverse_proxy.webp &#39;Reverse_proxy&#39;)
 
 进入网站目录，拉取镜像执行。
 
@@ -63,13 +63,13 @@ docker run -d --name vaultwarden -v ./vw-data/:/data/ --restart unless-stopped -
 
 要正常使用 Vaultwarden，还需要启用 HTTPS，就是给绑定域名申请个证书，原因来自官方 Wiki:
 
-> For proper operation of vaultwarden, enabling HTTPS is pretty much required nowadays, since the Bitwarden web vault uses web crypto APIs that most browsers only make available in HTTPS contexts.
+&gt; For proper operation of vaultwarden, enabling HTTPS is pretty much required nowadays, since the Bitwarden web vault uses web crypto APIs that most browsers only make available in HTTPS contexts.
 
 使用 1Panel 面板就很简单了，一键为绑定域名申请并自动续签 Let’s Encrypt 证书，略。
 
 添加完证书打开 `vw.yourdomain.com`，就可以看到 Vaultwarden 登录界面了。
 
-![Vaultwarden 登录界面](vaultwarden-login.webp 'Vaultwarden 登录界面')
+![Vaultwarden 登录界面](vaultwarden-login.webp &#39;Vaultwarden 登录界面&#39;)
 
 ### Vaultwarden 设置
 
@@ -109,9 +109,9 @@ PUSH_INSTALLATION_KEY=xxx // 刚才得到的 KEY
 
 #### SMTP 配置
 
-SMTP_HOST=<smtp.domain.tld> 
+SMTP_HOST=&lt;smtp.domain.tld&gt; 
 
-SMTP_FROM=<vaultwarden@domain.tld> 
+SMTP_FROM=&lt;vaultwarden@domain.tld&gt; 
 
 SMTP_PORT=port
 
@@ -137,7 +137,7 @@ Vaultwarden 可完美兼容 Bitwarden 全平台客户端。所以直接使用 Bi
 
 日常使用和 LastPass 软件这类没什么区别，如我常用的浏览器扩展，登录时候选择自托管，输入绑定域名就可以了,设置个主密码就可以了。
 
-![浏览器扩展](vaultwarden-kz.webp 'vaultwarden-kz.webp')
+![浏览器扩展](vaultwarden-kz.webp &#39;vaultwarden-kz.webp&#39;)
 
 ## 导入 LastPass 密码库
 
@@ -151,15 +151,15 @@ Vaultwarden 可完美兼容 Bitwarden 全平台客户端。所以直接使用 Bi
 
 ## Vaultwarden 工具
 
-我密码数据大概 260+，好多页面都打不开了，趁着有心情就整理一下分个类什么的，整理的时候发现 Vaultwarden 有一些工具，有个暴露检测，拿来试试。
+我密码数据大概 260&#43;，好多页面都打不开了，趁着有心情就整理一下分个类什么的，整理的时候发现 Vaultwarden 有一些工具，有个暴露检测，拿来试试。
 
-![Vaultwarden 工具](vaultwarden-tools.webp 'vaultwarden-tools.webp')
+![Vaultwarden 工具](vaultwarden-tools.webp &#39;vaultwarden-tools.webp&#39;)
 
 检测结果：
 
-![暴露密码检测报告](vaultwarden-report.webp 'vaultwarden-report.webp')
+![暴露密码检测报告](vaultwarden-report.webp &#39;vaultwarden-report.webp&#39;)
 
-抽空把一些比较重要的改一下吧，这次全部大小写字母 + 数字 + 特殊符号 + 18 位数随机生成了。
+抽空把一些比较重要的改一下吧，这次全部大小写字母 &#43; 数字 &#43; 特殊符号 &#43; 18 位数随机生成了。
 
 ---
 

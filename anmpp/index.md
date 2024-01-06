@@ -5,11 +5,11 @@
 
 ## 什么是ANMPP?
 
-> ANMPP是`android``nginx``mysql``php-fpm``postgresql`的简写，安卓本地ANMPP集成环境，手机PHP环境系统.
+&gt; ANMPP是`android``nginx``mysql``php-fpm``postgresql`的简写，安卓本地ANMPP集成环境，手机PHP环境系统.
 
 直观点就是一个集成的php本地环境，只不过不是运行在pc上的，而是在安卓手机上的。
 
-官方地址：[ANMPP.NET](http://anmpp.net/ "ANMPP官网")
+官方地址：[ANMPP.NET](http://anmpp.net/ &#34;ANMPP官网&#34;)
 
 大致看了下安装文档，
 
@@ -23,7 +23,7 @@
 
 ## 安装
 
-先下载，[点这里](http://anmpp.net/down.php "下载ANMPP")
+先下载，[点这里](http://anmpp.net/down.php &#34;下载ANMPP&#34;)
 
 30多MB，下载解压,把整个`anmpp目录`复制到到手机`sdcard目录`，
 
@@ -47,13 +47,13 @@ anmpp start
 
 截个图：
 
-![anmpp](2317891603.png "anmpp")
+![anmpp](2317891603.png &#34;anmpp&#34;)
 
 ## 测试
 
 完成后当然看有效果没，呵呵，最土的测试吧，默认的网页路径是`/mnt/sdcard/wwwroot`，那么随便扔个test进去，然后手机浏览器输入地址：`127.0.0.1`，看看有没有，如图：
 
-![ANMPP测试](1435145810.png "ANMPP测试")
+![ANMPP测试](1435145810.png &#34;ANMPP测试&#34;)
 
 至于其它，比如mysql之类还没仔细试试，先这样吧。
 

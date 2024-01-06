@@ -26,15 +26,15 @@ permalink: :title.html
 
 假设 `\source\_posts ` 文件夹 中，有一篇 `hello-world.md` 的文章，那么它生成的效果实例为：
 
-[https://clearsky.me/hello-world.html](https://clearsky.me/hello-world.html ' 你好，世界！ ')
+[https://clearsky.me/hello-world.html](https://clearsky.me/hello-world.html &#39; 你好，世界！ &#39;)
 
 问题来了，如果按照文件名称生成永久链接的，我的文件格式都要是这类 `英文字母.md`  的格式，那么我的 `\source\_posts ` 文件夹如下图：
 
-![posts_screenshot](posts_screenshot.png "posts_screenshot")
+![posts_screenshot](posts_screenshot.png &#34;posts_screenshot&#34;)
 
 看起来很乱啊，虽然文章不多，但我要找出一篇多年前的文章很难，按时间排序的话，很多文章又是后面修改过的，定位很难，如果改用 `中文标题.md` 的格式，似乎会好很多，一眼就能知道这篇文章说的是什么。但是改成 `中文标题.md` 的话，生成的链接就会类似这种：
 
-[https://clearsky.me/你好世界.html](https://clearsky.me/hello-world.html ' 你好，世界！ ')
+[https://clearsky.me/你好世界.html](https://clearsky.me/hello-world.html &#39; 你好，世界！ &#39;)
 
 浏览器地址栏上很不美观，对 SEO 也不好（虽然我不在乎）。
 
@@ -44,11 +44,11 @@ permalink: :title.html
 
 一番 Google 之后，终于找到答案，来自 [HEXO的站内链接和永久链接](http://www.wuliaole.com/post/permalink_and_internal_link_in_hexo/) 这篇文章里面说道：
 
-> Markdown `Front-matter` 区域可以看到，我这里除了 `title`， `date` 以及 `tags` 外，自己添加了一个新的变量 `urlname` ，这个新的变量用来保存每个文章的英文名字，这样一来可以有利于SEO，二来可以缩短博客文章URL的层数。
+&gt; Markdown `Front-matter` 区域可以看到，我这里除了 `title`， `date` 以及 `tags` 外，自己添加了一个新的变量 `urlname` ，这个新的变量用来保存每个文章的英文名字，这样一来可以有利于SEO，二来可以缩短博客文章URL的层数。
 
 那么，`Front-matter` 区域新增一个变量 `urlname` ，值为前面说的英文字母格式。拿昨天的一篇文章举例，如图蓝框处：
 
-![urlname](urlname.png "urlname")
+![urlname](urlname.png &#34;urlname&#34;)
 
 再在 Hexo 配置文件 `_config.yml` 中，把 `permalink:` 的值设为 `urlname.html` 。
 
@@ -62,7 +62,7 @@ OK，搞定！
 
 在看上面那篇文章的时候发现作者在每个 Markdown 格式的文章前加上时间，这样以后查找起来就非常简单了，很容易定位到。于是学习了，经过一番修改，我把以前所有的文章都加上了 `urlname` ，文件名称改成 `发布时间 - 中文标题.md` 这样的，纯体力活，之后如图：
 
-![posts_screenshot_after](posts_screenshot_after.png "posts_screenshot_after")
+![posts_screenshot_after](posts_screenshot_after.png &#34;posts_screenshot_after&#34;)
 
 这样看着舒服多了~
 

@@ -5,13 +5,13 @@
 
 ## 关于 Coding Pages
 
->Coding Pages 是一个免费的静态网页托管和演示服务。您可以使用 Coding Pages 托管博客、项目官网等静态网页，还可以绑定自定义域名。  Coding Pages 支持用户 Pages 演示和项目 Pages 演示。用户 Pages 可以通过 {user_name}.coding.me 形式的 URL 直接访问，适合用作个人或组织的演示网站；项目 Pages 需通过 {user_name}.coding.me/{project_name} 形式的 URL 访问，适合用作项目的演示网站。
+&gt;Coding Pages 是一个免费的静态网页托管和演示服务。您可以使用 Coding Pages 托管博客、项目官网等静态网页，还可以绑定自定义域名。  Coding Pages 支持用户 Pages 演示和项目 Pages 演示。用户 Pages 可以通过 {user_name}.coding.me 形式的 URL 直接访问，适合用作个人或组织的演示网站；项目 Pages 需通过 {user_name}.coding.me/{project_name} 形式的 URL 访问，适合用作项目的演示网站。
 
 ## 创建 Coding Pages
 
 登陆 Coding.net 创建一个与**用户名一样**的项目，切到 **Pages 服务**。
 
-![开启 Pages 服务](pages.png "Pages 服务")
+![开启 Pages 服务](pages.png &#34;Pages 服务&#34;)
 
 绑定域名，开启 pages 服务，分支 coding-pages 。
 
@@ -20,7 +20,7 @@
 命令行终端下：
 
 ```bash
-ssh-keygen -t rsa -b 4096 -C "your_email@example.com(注册用的email)"
+ssh-keygen -t rsa -b 4096 -C &#34;your_email@example.com(注册用的email)&#34;
 ```
 
 推荐一路按回车，完成后，进入 ssh 目录并列出文件：
@@ -38,7 +38,7 @@ cat id_rsa.pub
 
 复制出长长的字符串内容，粘贴到 Coding 的账号设置下的 SSH 公钥栏中。
 
-![SSH 公匙](id_rsa.pub.png "SSH 公匙设置")
+![SSH 公匙](id_rsa.pub.png &#34;SSH 公匙设置&#34;)
 
 ## Hexo 多部署
 

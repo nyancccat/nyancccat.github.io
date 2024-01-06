@@ -1,4 +1,4 @@
-# 申请 Let's Encrypt SSL 证书配置 Nginx 开启站点 HTTPS
+# 申请 Let&#39;s Encrypt SSL 证书配置 Nginx 开启站点 HTTPS
 
 
 ## 安装客户端
@@ -56,21 +56,21 @@ Certbot 支持多种不同的插件来获取证书，比如 [webroot](https://ce
    expire on 2017-09-17. To obtain a new or tweaked version of this
    certificate in the future, simply run certbot-auto again. To
    non-interactively renew *all* of your certificates, run
-   "certbot-auto renew"
+   &#34;certbot-auto renew&#34;
  - If you like Certbot, please consider supporting our work by:
 
-   Donating to ISRG / Let's Encrypt:   https://letsencrypt.org/donate
+   Donating to ISRG / Let&#39;s Encrypt:   https://letsencrypt.org/donate
    Donating to EFF:                    https://eff.org/donate-le
 ```
 
 就成功了，看提示，所有的证书文件在 `/etc/letsencrypt/live/你的域名` 下，里面有下面几个文件：
 
-{{< admonition info >}}
+{{&lt; admonition info &gt;}}
 - `privkey.pem` 这是私匙，对应 Nginx 的 ssl_certificate_key 选项，或者 Apache2 的 SSLCertificateKeyFile 选项。
 - `cert.pem` 服务器证书，这个只有 Apache2 低于 2.4.8 版本需要，对应 SSLCertificateFile 选项。
 - `chain.pem` 除服务器证书之外的所有证书，对于 1.3.7 版以上的 Nginx 对应 ssl_trusted_certificate 选项，对于低于2.4.8 的 Apache2 对应 SSLCertificateChainFile 选项。
 - `fullchain.pem` 包括上面的服务器证书和其他证书, Nginx 对应 ssl_certificate 选项，2.4.8 版以上的 Apache2 对应 SSLCertificateFile 选项。
-{{< /admonition >}}
+{{&lt; /admonition &gt;}}
 
 
 如果是 Nginx，需要上面的 `privkey.pem`（对应 ssl_certificate_key 选项）和 `fullchain.pem` （对应 ssl_certificate 选项），还需要一个 `dhparam.pem`（对应 ssl_dhparam 选项） 需自己生成：
@@ -89,13 +89,13 @@ openssl dhparam -out /etc/nginx/ssl/dhparam.pem 2048
 
 ### 什么是 HTTP/2 ?
 
-> **HTTP/2**（超文本传输协议第2版，最初命名为**HTTP 2.0**），是[HTTP](https://zh.wikipedia.org/wiki/HTTP)协议的的第二个主要版本，使用于[万维网](https://zh.wikipedia.org/wiki/%E5%85%A8%E7%90%83%E8%B3%87%E8%A8%8A%E7%B6%B2)。HTTP/2是[HTTP](https://zh.wikipedia.org/wiki/HTTP)协议自1999年HTTP 1.1发布后的首个更新，主要基于[SPDY](https://zh.wikipedia.org/wiki/SPDY)协议。它由[互联网工程任务组](https://zh.wikipedia.org/wiki/%E4%BA%92%E8%81%94%E7%BD%91%E5%B7%A5%E7%A8%8B%E4%BB%BB%E5%8A%A1%E7%BB%84)（IETF）的Hypertext Transfer Protocol Bis（httpbis）工作小组进行开发。[[1\]](https://zh.wikipedia.org/wiki/HTTP/2#cite_note-charter-1)该组织于2014年12月将HTTP/2标准提议递交至[IESG](https://zh.wikipedia.org/w/index.php?title=Internet_Engineering_Steering_Group&action=edit&redlink=1)进行讨论[[2\]](https://zh.wikipedia.org/wiki/HTTP/2#cite_note-2)，于2015年2月17日被批准。[[3\]](https://zh.wikipedia.org/wiki/HTTP/2#cite_note-approval2-3) HTTP/2标准于2015年5月以RFC 7540正式发表。[[4\]](https://zh.wikipedia.org/wiki/HTTP/2#cite_note-rfc7540-4)
+&gt; **HTTP/2**（超文本传输协议第2版，最初命名为**HTTP 2.0**），是[HTTP](https://zh.wikipedia.org/wiki/HTTP)协议的的第二个主要版本，使用于[万维网](https://zh.wikipedia.org/wiki/%E5%85%A8%E7%90%83%E8%B3%87%E8%A8%8A%E7%B6%B2)。HTTP/2是[HTTP](https://zh.wikipedia.org/wiki/HTTP)协议自1999年HTTP 1.1发布后的首个更新，主要基于[SPDY](https://zh.wikipedia.org/wiki/SPDY)协议。它由[互联网工程任务组](https://zh.wikipedia.org/wiki/%E4%BA%92%E8%81%94%E7%BD%91%E5%B7%A5%E7%A8%8B%E4%BB%BB%E5%8A%A1%E7%BB%84)（IETF）的Hypertext Transfer Protocol Bis（httpbis）工作小组进行开发。[[1\]](https://zh.wikipedia.org/wiki/HTTP/2#cite_note-charter-1)该组织于2014年12月将HTTP/2标准提议递交至[IESG](https://zh.wikipedia.org/w/index.php?title=Internet_Engineering_Steering_Group&amp;action=edit&amp;redlink=1)进行讨论[[2\]](https://zh.wikipedia.org/wiki/HTTP/2#cite_note-2)，于2015年2月17日被批准。[[3\]](https://zh.wikipedia.org/wiki/HTTP/2#cite_note-approval2-3) HTTP/2标准于2015年5月以RFC 7540正式发表。[[4\]](https://zh.wikipedia.org/wiki/HTTP/2#cite_note-rfc7540-4)
 
 ### 什么是 HSTS ?
 
-> **HTTP严格传输安全**（英语：HTTP Strict Transport Security，[缩写](https://zh.wikipedia.org/wiki/%E7%B8%AE%E5%AF%AB)：HSTS）是一套由[互联网工程任务组](https://zh.wikipedia.org/wiki/%E4%BA%92%E8%81%94%E7%BD%91%E5%B7%A5%E7%A8%8B%E4%BB%BB%E5%8A%A1%E7%BB%84)发布的[互联网](https://zh.wikipedia.org/wiki/%E4%BA%92%E8%81%94%E7%BD%91)安全策略机制。[网站](https://zh.wikipedia.org/wiki/%E7%BD%91%E7%AB%99)可以选择使用HSTS策略，来让[浏览器](https://zh.wikipedia.org/wiki/%E6%B5%8F%E8%A7%88%E5%99%A8)强制使用[HTTPS](https://zh.wikipedia.org/wiki/%E8%B6%85%E6%96%87%E6%9C%AC%E4%BC%A0%E8%BE%93%E5%AE%89%E5%85%A8%E5%8D%8F%E8%AE%AE)与网站进行通信，以减少[会话劫持](https://zh.wikipedia.org/wiki/%E4%BC%9A%E8%AF%9D%E5%8A%AB%E6%8C%81)风险[[1\]](https://zh.wikipedia.org/wiki/HTTP%E4%B8%A5%E6%A0%BC%E4%BC%A0%E8%BE%93%E5%AE%89%E5%85%A8#cite_note-cnet-1)[[2\]](https://zh.wikipedia.org/wiki/HTTP%E4%B8%A5%E6%A0%BC%E4%BC%A0%E8%BE%93%E5%AE%89%E5%85%A8#cite_note-cnw-2)。
+&gt; **HTTP严格传输安全**（英语：HTTP Strict Transport Security，[缩写](https://zh.wikipedia.org/wiki/%E7%B8%AE%E5%AF%AB)：HSTS）是一套由[互联网工程任务组](https://zh.wikipedia.org/wiki/%E4%BA%92%E8%81%94%E7%BD%91%E5%B7%A5%E7%A8%8B%E4%BB%BB%E5%8A%A1%E7%BB%84)发布的[互联网](https://zh.wikipedia.org/wiki/%E4%BA%92%E8%81%94%E7%BD%91)安全策略机制。[网站](https://zh.wikipedia.org/wiki/%E7%BD%91%E7%AB%99)可以选择使用HSTS策略，来让[浏览器](https://zh.wikipedia.org/wiki/%E6%B5%8F%E8%A7%88%E5%99%A8)强制使用[HTTPS](https://zh.wikipedia.org/wiki/%E8%B6%85%E6%96%87%E6%9C%AC%E4%BC%A0%E8%BE%93%E5%AE%89%E5%85%A8%E5%8D%8F%E8%AE%AE)与网站进行通信，以减少[会话劫持](https://zh.wikipedia.org/wiki/%E4%BC%9A%E8%AF%9D%E5%8A%AB%E6%8C%81)风险[[1\]](https://zh.wikipedia.org/wiki/HTTP%E4%B8%A5%E6%A0%BC%E4%BC%A0%E8%BE%93%E5%AE%89%E5%85%A8#cite_note-cnet-1)[[2\]](https://zh.wikipedia.org/wiki/HTTP%E4%B8%A5%E6%A0%BC%E4%BC%A0%E8%BE%93%E5%AE%89%E5%85%A8#cite_note-cnw-2)。
 
-上面这种非正常人类语言看不看无所谓，主要目的是开启这些，会让你的站点 [Qualys SSL Labs](https://www.ssllabs.com/ssltest/) 评分很容易达到 **A+** ~~
+上面这种非正常人类语言看不看无所谓，主要目的是开启这些，会让你的站点 [Qualys SSL Labs](https://www.ssllabs.com/ssltest/) 评分很容易达到 **A&#43;** ~~
 
 所以，最后我的 Nginx 配置，关于 SSL 部分配置，我是用 [Mozilla SSL Configuration Generator](https://mozilla.github.io/server-side-tls/ssl-config-generator/)  来生成修改的，增加了一些安全配置。更多还在摸索中，保持更新：
 
@@ -121,14 +121,14 @@ server {
   ssl_session_cache shared:SSL:50m;
   ssl_session_timeout 1d;
   ssl_session_tickets off;
-  ssl_ciphers 'ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA256';
+  ssl_ciphers &#39;ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA256&#39;;
   ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
   ssl_prefer_server_ciphers on;
   ssl_stapling on;
   ssl_stapling_verify on;
 
   # 开启 HSTS,这么写是为了提交到 https://hstspreload.org/
-  add_header Strict-Transport-Security "max-age=31536000; includeSubdomains;preload";
+  add_header Strict-Transport-Security &#34;max-age=31536000; includeSubdomains;preload&#34;;
 
   # 网页不允许被 iframe 嵌套。
   add_header X-Frame-Options DENY;
@@ -137,7 +137,7 @@ server {
   add_header  X-Content-Type-Options  nosniff;
 
   # 启用 XSS 保护，检查到 XSS 攻击时，停止渲染页面。
-  add_header X-XSS-Protection "1; mode=block";
+  add_header X-XSS-Protection &#34;1; mode=block&#34;;
 
   # 下面这个还在找资料暂时不管，先注释。
   #add_header  Content-Security-Policy  
@@ -146,12 +146,12 @@ server {
   access_log  /var/log/nginx/hexo_access.log;
   error_log   /var/log/nginx/hexo_error.log;
   error_page 404 =  /404.html;
-  location ~* ^.+\.(ico|gif|jpg|jpeg|png)$ {
+  location ~* ^.&#43;\.(ico|gif|jpg|jpeg|png)$ {
     root /var/www/hexo;
     access_log   off;
     expires      1d;
   }
-  location ~* ^.+\.(css|js|txt|xml|swf|wav)$ {
+  location ~* ^.&#43;\.(css|js|txt|xml|swf|wav)$ {
     root /var/www/hexo;
     access_log   off;
     expires      10m;
@@ -179,7 +179,7 @@ server {
 
 ## 后续证书更新
 
-Let's Encrypt SSL 免费证书为短期证书，只有 90 天期限，提示到期前可以运行命令 `./certbot-auto renew ` 续期，VPS 上可以设置定时任务自动化完成，我还没弄好，主要是不会写脚本。。。暂时先是这样，也不知道能不能行：
+Let&#39;s Encrypt SSL 免费证书为短期证书，只有 90 天期限，提示到期前可以运行命令 `./certbot-auto renew ` 续期，VPS 上可以设置定时任务自动化完成，我还没弄好，主要是不会写脚本。。。暂时先是这样，也不知道能不能行：
 
 ```
 crontab -e
@@ -189,7 +189,7 @@ crontab -e
 
 ```
 0 0 28 * * /etc/init.d/nginx stop
-0 1 28 * * cd certbot && ./certbot-auto renew
+0 1 28 * * cd certbot &amp;&amp; ./certbot-auto renew
 0 2 28 * * openssl dhparam -out /etc/nginx/ssl/dhparam.pem 2048
 0 3 28 * * /etc/init.d/nginx restart
 ```
@@ -202,7 +202,7 @@ crontab -e
 
 ```sh
 #!/bin/sh
-cd certbot && openssl dhparam -out /etc/nginx/ssl/dhparam.pem 2048 && /etc/init.d/nginx stop && ./certbot-auto renew --standalone && /etc/init.d/nginx start
+cd certbot &amp;&amp; openssl dhparam -out /etc/nginx/ssl/dhparam.pem 2048 &amp;&amp; /etc/init.d/nginx stop &amp;&amp; ./certbot-auto renew --standalone &amp;&amp; /etc/init.d/nginx start
 ```
 
 保存为 `auto-renew.sh` ，扔到 `/root/scripts/` ，继续  `crontab -e` ，编辑为：

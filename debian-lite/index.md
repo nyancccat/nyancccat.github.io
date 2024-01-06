@@ -11,7 +11,7 @@
 **升级系统：**
 
 ```bash
-apt-get update&&apt-get upgrade
+apt-get update&amp;&amp;apt-get upgrade
 ```
 
 **删除完全多余的软件：**
@@ -31,12 +31,12 @@ apt-get -y purge apache2-* bind9-* xinetd samba-* nscd-* portmap sendmail-* sasl
 **事后清理：**
 
 ```bash
-apt-get autoremove && apt-get clean
+apt-get autoremove &amp;&amp; apt-get clean
 ```
 
 **完事后效果：**
 
-![putty.jpg](2855228556.jpg "putty.jpg")
+![putty.jpg](2855228556.jpg &#34;putty.jpg&#34;)
 
 
 ---

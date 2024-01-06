@@ -5,7 +5,7 @@
 
 ```bash
 useradd username -s /sbin/nologin
-echo username:password | chpasswd`</pre>
+echo username:password | chpasswd`&lt;/pre&gt;
 ```
 
 ## 调整时区
@@ -26,7 +26,7 @@ vi /etc/ssh/sshd_config
 service sshd restart
 ```
 
-## 常用ssh命令，来自[vps侦探](http://www.vpser.net/build/linux-vps-ssh-command.html "http://www.vpser.net/build/linux-vps-ssh-command.html")
+## 常用ssh命令，来自[vps侦探](http://www.vpser.net/build/linux-vps-ssh-command.html &#34;http://www.vpser.net/build/linux-vps-ssh-command.html&#34;)
 
 ## 目录操作：
 

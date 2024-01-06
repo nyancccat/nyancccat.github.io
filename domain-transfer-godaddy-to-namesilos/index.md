@@ -11,17 +11,17 @@
 
 登陆 Godaddy 账户，Additional Settings, 把域名锁定关闭掉。
 
-![解锁域名](DomianLockOff.png "解锁域名")
+![解锁域名](DomianLockOff.png &#34;解锁域名&#34;)
 
 ### 获取转移授权码
 
 点击下方的 Get authorization code , 转移授权码会直接发送到域名管理员邮箱。
 
-![获取转移码](GetAuthorizationCode.png "获取转移码")
+![获取转移码](GetAuthorizationCode.png &#34;获取转移码&#34;)
 
 会收到 Godaddy 的邮件，里面有域名和转移码授权码信息。
 
-![转移授权码](AuthorizationCode.png "转移授权码")
+![转移授权码](AuthorizationCode.png &#34;转移授权码&#34;)
 
 ## Namesilo 转入
 
@@ -29,11 +29,11 @@
 
 登陆 Namesilo 账户，导航模块 Transfer ，有单个域名转入和批量转入两种方式，我就一个，直接 Single Domain Transfer。
 
-![转移提交](transfer0.png "转移提交")
+![转移提交](transfer0.png &#34;转移提交&#34;)
 
 填入转移授权码，确认转移。
 
-![填入转移码](transfer1.png "填入转移码")
+![填入转移码](transfer1.png &#34;填入转移码&#34;)
 
 ### 支付信息及优惠码
 
@@ -41,25 +41,25 @@
 
 自动续费选否， Privacy Setting 选择 WHOIS Privacy ，免费的，优惠码网上随便找了一个，转入优惠 1 刀，总价 14.99 刀。
 
-![账单信息](cartcontents.png "账单信息")
+![账单信息](cartcontents.png &#34;账单信息&#34;)
 
 提交支付后，选择支付方式，支持多种支付方式，最后那个熟悉的马牌支付宝。
 
-![支付方式](payment0.png "支付方式")
+![支付方式](payment0.png &#34;支付方式&#34;)
 
 100大洋多一点，还行。
 
-![费用](payment1.png "费用")
+![费用](payment1.png &#34;费用&#34;)
 
 ### 确认转移
 
 Namesilo 查看转入信息，已经有确认邮件发出。
 
-![确认转移-I](ConfirmTransfer0.png "确认转移-I")
+![确认转移-I](ConfirmTransfer0.png &#34;确认转移-I&#34;)
 
-![确认转移-II](ConfirmTransfer1.png "确认转移-II")
+![确认转移-II](ConfirmTransfer1.png &#34;确认转移-II&#34;)
 
-![确认转移-III](ConfirmTransfer2.png "确认转移-III")
+![确认转移-III](ConfirmTransfer2.png &#34;确认转移-III&#34;)
 
 导致完成接下来就等 Godaddy 那边处理了。
 
@@ -67,16 +67,16 @@ Namesilo 查看转入信息，已经有确认邮件发出。
 
 这回收到一封来自 Godaddy 的邮件， 如下：
 
-![Godaddy转出通知](godaddy-transfe-out.png "Godaddy转出通知")
+![Godaddy转出通知](godaddy-transfe-out.png &#34;Godaddy转出通知&#34;)
 
 可以看到你不自己处理的话，它会自己拖个几天才转移，很显然没人愿意等，于是登陆 Godaddy 账户，Transfer 列表，选中域名 Accept or decline 选项，然后Accept Transfer 。
 
-![转移](AcceptTransfer.png "转移")
+![转移](AcceptTransfer.png &#34;转移&#34;)
 
 接下来就是等待了，大概10分钟， Namesilo 账户已经显示域名转入了。
 
 
-![转移完成](TransferSuccess.png "转移完成")
+![转移完成](TransferSuccess.png &#34;转移完成&#34;)
 
 ## 尾声
 

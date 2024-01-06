@@ -7,7 +7,7 @@
 
 至于买哪个，我一般都针对自己需求：
 
-1.  我要求不高，放个基本无流量的wordpress + 搭建梯子 + 一些命令学习，配置够用就行。
+1.  我要求不高，放个基本无流量的wordpress &#43; 搭建梯子 &#43; 一些命令学习，配置够用就行。
 2.  付款简单点好，我懒得信用卡，paypal，财付通运通账号之类的。
 3.  E文烂，最好有中文客服，但是这个有利有弊，国人扎堆的vps你懂的。
 4.  线路稳定点，速度稍微慢点无所谓，但是天天抽风就不好了。
@@ -16,10 +16,10 @@
 
 说说买的这个vps吧，AcrosVM，引用官网的介绍：
 
-> AcrosVM是由美国Hostigation的開展的直属品牌，提供OpenVZ架构的VPS主机服务。 Hostigation自2006年开始提供服务，和Highspeedweb, AcrosVM 為同一集团品牌。
-> 呵呵，看是Hostigation旗下，这家挺不错的，好感度+1。 AcrosVM支持支付宝，有中文客服，美国西岸 QuadraNET（PR）的数据中心. 基于openvz,管理面板是SolusVM，面板上可以自行打开`tun/tap` `ppp`,作用你懂的。 OpenVZ各个套餐： 
+&gt; AcrosVM是由美国Hostigation的開展的直属品牌，提供OpenVZ架构的VPS主机服务。 Hostigation自2006年开始提供服务，和Highspeedweb, AcrosVM 為同一集团品牌。
+&gt; 呵呵，看是Hostigation旗下，这家挺不错的，好感度&#43;1。 AcrosVM支持支付宝，有中文客服，美国西岸 QuadraNET（PR）的数据中心. 基于openvz,管理面板是SolusVM，面板上可以自行打开`tun/tap` `ppp`,作用你懂的。 OpenVZ各个套餐： 
 
-![acrosvm套餐](acrosvm-plan.jpg "acrosvm套餐")
+![acrosvm套餐](acrosvm-plan.jpg &#34;acrosvm套餐&#34;)
 
 ### 购买
 
@@ -29,22 +29,22 @@
 
 老一套： 先看内存，无突发。
 
-![free-m](free-m.jpg "free-m")
+![free-m](free-m.jpg &#34;free-m&#34;)
 CPU：凑合
 
-![cpu-info](cpu-info.jpg "cpu-info")
+![cpu-info](cpu-info.jpg &#34;cpu-info&#34;)
 
 速率：凑合。
 
-![sulv](sulv.jpg "sulv]")
+![sulv](sulv.jpg &#34;sulv]&#34;)
 
 硬盘IO：比我想象的好。
 
-![io](io.jpg "io")
+![io](io.jpg &#34;io&#34;)
 
 管路面板重装了centos6 32位，懒得麻烦，直接装了AMH4.2，打包一下原来虚拟主机的数据，转过来了。
 
-![ahm4.2](ahm4.2.jpg "ahm4.2")
+![ahm4.2](ahm4.2.jpg &#34;ahm4.2&#34;)
 
 怎么说呢，感觉原来的虚拟主机还没到期，又换，挺浪费的，虽然钱不多，但是需要克制一下了。
 

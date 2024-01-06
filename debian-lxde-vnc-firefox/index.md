@@ -1,7 +1,7 @@
-# Debian 7 安装 LXDE + VNC + Firefox
+# Debian 7 安装 LXDE &#43; VNC &#43; Firefox
 
 
-需要搞点挂机的东西，只需要安装firefox + flash支持 + 自动刷新扩展，本来想买个windows挂机宝之类的，后来想想现在用的vps挫是挫了一点，装个桌面环境挂挂机应该还行。
+需要搞点挂机的东西，只需要安装firefox &#43; flash支持 &#43; 自动刷新扩展，本来想买个windows挂机宝之类的，后来想想现在用的vps挫是挫了一点，装个桌面环境挂挂机应该还行。
 
 前几天找了个Gnone一键包，用着还凑合，就是现在用的VPS是在是太挫了，硬盘小，安装完硬盘快爆了，想想还是装点轻量级的。
 
@@ -26,7 +26,7 @@ apt-get install nano xorg lxde-core
 
 安装过程中会弹出一个键盘布局选择，这里直接选默认的就行:
 
-![选择默认键盘布局](ketboard-layout.png "选择默认键盘布局")
+![选择默认键盘布局](ketboard-layout.png &#34;选择默认键盘布局&#34;)
 
 安装VNC，这里用的是tightvncserver：
 
@@ -40,7 +40,7 @@ tightvncserver :1
 
 运行后会弹出设置密码，输入`两次`以便确认，还会提示是否设置一个仅供查看的密码，这里就不需要了，直接输入`n`，如图：
 
-![设置密码](vnc-password.png "设置密码")
+![设置密码](vnc-password.png &#34;设置密码&#34;)
 
 接着先暂停VNC：
 
@@ -57,15 +57,15 @@ nano ~/.vnc/xstartup
 在最后加上两行：
 
 ```bash
-lxterminal &
-/usr/bin/lxsession -s LXDE &
+lxterminal &amp;
+/usr/bin/lxsession -s LXDE &amp;
 ```
 
-'Ctrl + X'输入`y`回车，保存退出。
+&#39;Ctrl &#43; X&#39;输入`y`回车，保存退出。
 
 完成后如图：
 
-![编辑xstartup](xstartup.png "编辑xstartup")
+![编辑xstartup](xstartup.png &#34;编辑xstartup&#34;)
 
 ## 设置开机启动
 
@@ -89,22 +89,22 @@ nano /etc/init.d/tightvncserver
 # Description: Starts tight VNC Server. Script written by James Swineson.
 ### END INIT INFO
 # /etc/init.d/tightvncserver
-VNCUSER='root'
-case "$1" in
+VNCUSER=&#39;root&#39;
+case &#34;$1&#34; in
 start)
-su $VNCUSER -c '/usr/bin/tightvncserver -geometry 800x600 -depth 24 :1'
-echo "Starting TightVNC Server for $VNCUSER"
+su $VNCUSER -c &#39;/usr/bin/tightvncserver -geometry 800x600 -depth 24 :1&#39;
+echo &#34;Starting TightVNC Server for $VNCUSER&#34;
 ;;
 stop)
 pkill Xtightvnc
-echo "TightVNC Server stopped"
+echo &#34;TightVNC Server stopped&#34;
 ;;
 *)
-echo "Usage: /etc/init.d/tightvncserver {start|stop}"
+echo &#34;Usage: /etc/init.d/tightvncserver {start|stop}&#34;
 exit 1
 ;;
 esac
-exit 0`</pre>
+exit 0`&lt;/pre&gt;
 ```
 
 保存后，加权限：
@@ -128,15 +128,15 @@ tightvncserver :1
 
 到这里可以用TightVNC Viewer或者VNC-Viewer等VNC软件连接了。
 
-我这里用的是VNC-Viewer, 可以点[这里](http://www.realvnc.com/download/viewer/ "Download VNC® Viewer")下载:
+我这里用的是VNC-Viewer, 可以点[这里](http://www.realvnc.com/download/viewer/ &#34;Download VNC® Viewer&#34;)下载:
 
 地址填上你的`ip:1`，如图：
 
-![VNC-Viewer](vnc-view.png "VNC-Viewer")
+![VNC-Viewer](vnc-view.png &#34;VNC-Viewer&#34;)
 
 接着输入上面设置的密码后进入桌面，试着打开浏览器看看，一堆“麻将字”，很显然还需要设置中文环境。
 
-![中文乱码](vnc-lm.png "中文乱码")
+![中文乱码](vnc-lm.png &#34;中文乱码&#34;)
 
 ## 配置中文环境
 
@@ -144,7 +144,7 @@ tightvncserver :1
 dpkg-reconfigure locales
 ```
 
-![设置语言区域](locales.png "设置语言区域")
+![设置语言区域](locales.png &#34;设置语言区域&#34;)
 
 拖到下面，`空格`选中`zh_CN.UTF-8`，回车。
 
@@ -156,7 +156,7 @@ apt-get install ttf-arphic-ukai ttf-arphic-uming ttf-arphic-gbsn00lp ttf-arphic-
 
 重启系统一次，再次连接看看，已经是中文了：
 
-![中文支持](vnc-zh.png "中文支持")
+![中文支持](vnc-zh.png &#34;中文支持&#34;)
 
 
 ## 安裝Firefox中文版
@@ -173,7 +173,7 @@ nano /etc/apt/sources.list
 deb http://mirrors.ustc.edu.cn/linuxmint/ debian import
 ```
 
-![添加linuxmint源](linuxmint-debian.png "添加linuxmint源")
+![添加linuxmint源](linuxmint-debian.png &#34;添加linuxmint源&#34;)
 
 保存后安装linuxmint的公钥：
 
@@ -209,21 +209,21 @@ apt-get install flashplugin-nonfree
 
 大功告成，试试，如图：
 
-![中文版firefox](firefox-zh.png "中文版firefox]")
+![中文版firefox](firefox-zh.png &#34;中文版firefox]&#34;)
 
 挂机需要个自动刷新插件，个人喜好是reloadevery扩展：
 
-![reloadevery扩展](reloadevery.png "reloadevery扩展")
+![reloadevery扩展](reloadevery.png &#34;reloadevery扩展&#34;)
 
 最后清理缓存：
 
 ```bash
-apt-get autoremove && apt-get clean
+apt-get autoremove &amp;&amp; apt-get clean
 ```
 
 最好`reboot`一次，重启之后看看搬瓦工的后台，还行，够用：
 
-![搬瓦工后台](bandwagon-cp.png "搬瓦工后台")
+![搬瓦工后台](bandwagon-cp.png &#34;搬瓦工后台&#34;)
 
 完，睡觉！
 

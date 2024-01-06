@@ -8,7 +8,7 @@
 ```bash
 git add .
 git status
-git commit -m "xxx"
+git commit -m &#34;xxx&#34;
 git push
 ```
 
@@ -18,9 +18,9 @@ git push
 
 没有在原来项目上新建分支，而是新建了一个仓库用来管理源文件，Github Action 触发后生成静态文件推到原来的 GitHub Pages 项目。在这之前，需要在新建项目仓库设置下验证 key , 具体仓库页面 `Settings - secrets - Actions - New Repository secrets` 设置一下私钥就好了。
 
-{{< admonition type=note >}}
+{{&lt; admonition type=note &gt;}}
 名称注意和下面要设置的 `workflows` 配置一样，我的为 `ACTIONS_DEPLOY_KEY`
-{{< /admonition >}}
+{{&lt; /admonition &gt;}}
 
 
 然后本地 Hugo 博客目录新建`.github/workflows`下，配置以 .yml 后缀结尾，我的为`.github/workflows/deploy.yml`，编辑这个配置文件：
@@ -33,7 +33,7 @@ on:
     workflow_dispatch:
     schedule:
         # 定时执行
-        - cron: "0 2 * * *"
+        - cron: &#34;0 2 * * *&#34;
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
@@ -65,11 +65,11 @@ jobs:
 
 `on` 这里有三种触发方式：
 
-{{< admonition type = abstract title ="触发方式：" >}}
+{{&lt; admonition type = abstract title =&#34;触发方式：&#34; &gt;}}
 - `push`：git push 推送时执行。
 - `workflow_dispatch`：项目仓库的 Action 手动执行。
 - `schedule`：定时执行。
-{{< /admonition >}}
+{{&lt; /admonition &gt;}}
 
 
 ## 执行结果
@@ -78,7 +78,7 @@ jobs:
 
 详情流程可以到源文件仓库的 `actions -- workflows` 下查看。
 
-![Explore-GitHub-Actions](Explore-GitHub-Actions.png "Explore-GitHub-Actions")
+![Explore-GitHub-Actions](Explore-GitHub-Actions.png &#34;Explore-GitHub-Actions&#34;)
 
 ## 简单部署脚本
 
@@ -86,14 +86,14 @@ jobs:
 
 ```bash
 #!/bin/bash
-echo -e "Deploying..."
+echo -e &#34;Deploying...&#34;
 git add .
 git status
-read -p "Enter git commit message: " msg
+read -p &#34;Enter git commit message: &#34; msg
 if [ -z $msg ];then
-  msg="update $(date +'%F %a %T')"
+  msg=&#34;update $(date &#43;&#39;%F %a %T&#39;)&#34;
 fi
-git commit -m "$msg"
+git commit -m &#34;$msg&#34;
 git push
 ```
 

@@ -11,7 +11,7 @@
 
 申请完得到两个文件`ssl.crt`和`ssl.key`。
 
-系统环境约定：CentOS6.4 64位 + 军哥的一键包LNMP1.1。
+系统环境约定：CentOS6.4 64位 &#43; 军哥的一键包LNMP1.1。
 
 （写完这篇的时候发现军哥LNMP1.2发布了，默认启用spdy和增加ssl范例配置，本文还是以LNMP1.1为例）。
 
@@ -30,7 +30,7 @@ openssl rsa -in ssl.key -out /usr/local/server/nginx/conf/ssl_ca.key
 ```bash
 wget http://www.startssl.com/certs/ca.pem
 wget http://www.startssl.com/certs/sub.class1.server.ca.pem
-cat ssl.crt sub.class1.server.ca.pem ca.pem > /usr/local/server/nginx/conf/ssl_ca.crt
+cat ssl.crt sub.class1.server.ca.pem ca.pem &gt; /usr/local/server/nginx/conf/ssl_ca.crt
 ```
 
 这个`ssl_ca.crt`还不能直接使用，需要修改下，真的用不惯vi，所以：
@@ -100,7 +100,7 @@ ssl_certificate_key /usr/local/nginx/conf/ssl_ca.key;
 ssl_session_timeout     5m;
 ssl_protocols           SSLv2 SSLv3 TLSv1;
 ssl_prefer_server_ciphers       on;
-ssl_ciphers             ALL:!ADH:!EXPORT56:RC4+RSA:+HIGH:+MEDIUM:+LOW:+SSLv2:+EXP;
+ssl_ciphers             ALL:!ADH:!EXPORT56:RC4&#43;RSA:&#43;HIGH:&#43;MEDIUM:&#43;LOW:&#43;SSLv2:&#43;EXP;
 ```
 
 **上面这段已经弃用**，// 2015.8.25更新如下，解决Chrome显示“之间的连接采用了过时的加密技术”的问题：
@@ -118,7 +118,7 @@ ssl_session_cache shared:SSL:10m;
 ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
 
 ssl_prefer_server_ciphers       on;
-ssl_ciphers "ECDHE-RSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:DHE-RSA-AES256-GCM-SHA384:DHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-SHA384:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA:ECDHE-RSA-AES128-SHA:DHE-RSA-AES256-SHA256:DHE-RSA-AES128-SHA256:DHE-RSA-AES256-SHA:DHE-RSA-AES128-SHA:ECDHE-RSA-DES-CBC3-SHA:EDH-RSA-DES-CBC3-SHA:AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA:DES-CBC3-SHA:HIGH:!aNULL:!eNULL:!EXPORT:!DES:!MD5:!PSK:!RC4";
+ssl_ciphers &#34;ECDHE-RSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:DHE-RSA-AES256-GCM-SHA384:DHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-SHA384:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA:ECDHE-RSA-AES128-SHA:DHE-RSA-AES256-SHA256:DHE-RSA-AES128-SHA256:DHE-RSA-AES256-SHA:DHE-RSA-AES128-SHA:ECDHE-RSA-DES-CBC3-SHA:EDH-RSA-DES-CBC3-SHA:AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA:DES-CBC3-SHA:HIGH:!aNULL:!eNULL:!EXPORT:!DES:!MD5:!PSK:!RC4&#34;;
 ```
 
 监听80端口，http强制跳转https：
@@ -139,14 +139,14 @@ WordPress设置-常规，把WordPress地址（URL）和 站点地址（URL）都
 然后进数据库，文章内容和评论里面批量替换链接（注意备份），SQL执行：
 
 ```sql
-UPDATE wp_posts SET post_content = REPLACE (post_content, 'http://example.com', 'https://example.com');   
-UPDATE wp_posts SET post_content = REPLACE (post_content, 'http://example.com', 'https://example.com');
+UPDATE wp_posts SET post_content = REPLACE (post_content, &#39;http://example.com&#39;, &#39;https://example.com&#39;);   
+UPDATE wp_posts SET post_content = REPLACE (post_content, &#39;http://example.com&#39;, &#39;https://example.com&#39;);
 
-UPDATE wp_comments SET comment_content = REPLACE( comment_content, 'http://example.com', 'https://example.com' );
-UPDATE wp_comments SET comment_content = REPLACE( comment_content, 'http://example.com', 'https://example.com' );
+UPDATE wp_comments SET comment_content = REPLACE( comment_content, &#39;http://example.com&#39;, &#39;https://example.com&#39; );
+UPDATE wp_comments SET comment_content = REPLACE( comment_content, &#39;http://example.com&#39;, &#39;https://example.com&#39; );
 ```
 
-我没用上面的，直接用的Search & Replace插件替换的，挺方便的，反正用什么都注意备份。
+我没用上面的，直接用的Search &amp; Replace插件替换的，挺方便的，反正用什么都注意备份。
 
 排查页面引用的外部资源，改成https的，完成后Chrome浏览器下绿锁应该出现了，其它的浏览器没装，不清楚。
 

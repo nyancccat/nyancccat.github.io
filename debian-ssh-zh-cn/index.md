@@ -16,10 +16,10 @@ putty设置界面`Window`下的`Translation`，`Remote character set`那里设�
 root登陆后：
 
 ```bash
-dpkg-reconfigure locales`</pre>
+dpkg-reconfigure locales`&lt;/pre&gt;
 ```
 
-![locales设置](1829243740.jpg "locales设置")
+![locales设置](1829243740.jpg &#34;locales设置&#34;)
 
 上下键选择`zh_CN.UTF-8`，`空格`选中，`tab`切换到确认，回车。我已经改过了，所以截图是中文。询问默认的系统区域设置，还是选原来的`zh_CN.UTF-8`。`tab`切换到确认，回车。
 
@@ -33,18 +33,18 @@ vi  /etc/environment
 添加一行：
 
 ```bash
-LC_CTYPE="zh_CN.UTF-8"
+LC_CTYPE=&#34;zh_CN.UTF-8&#34;
 ```
 
 按下`Esc`退出编辑模式，`:wq`保存退出。
 
-这里找资料的时候翻到`:wq`和`:x`的区别，顺便记录一下。资料来源于：[小蜗牛技术之家](http://snailwarrior.blog.51cto.com/680306/143779 "vi文件保存退出命令")
+这里找资料的时候翻到`:wq`和`:x`的区别，顺便记录一下。资料来源于：[小蜗牛技术之家](http://snailwarrior.blog.51cto.com/680306/143779 &#34;vi文件保存退出命令&#34;)
 
-`:wq  `**强制性写入文件并退出。即使文件没有被修改也强制写入，并更新文件的修改时间。**</p>`:x `**写入文件并退出。仅当文件被修改时才写入，并更新文件修改时间，否则不会更新文件修改时间。**
+`:wq  `**强制性写入文件并退出。即使文件没有被修改也强制写入，并更新文件的修改时间。**&lt;/p&gt;`:x `**写入文件并退出。仅当文件被修改时才写入，并更新文件修改时间，否则不会更新文件修改时间。**
 
 重新登陆一下，输个`date`命令看看：
 
-![ssh显示中文](2727721127.jpg "ssh显示中文")
+![ssh显示中文](2727721127.jpg &#34;ssh显示中文&#34;)
 
 完成！
 

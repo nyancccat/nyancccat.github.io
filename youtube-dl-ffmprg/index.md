@@ -1,4 +1,4 @@
-# Ubuntu 16.04 使用 youtube-dl + FFmpeg 下载 Youtube 1080p 视频
+# Ubuntu 16.04 使用 youtube-dl &#43; FFmpeg 下载 Youtube 1080p 视频
 
 
 
@@ -24,7 +24,7 @@ apt-get install ffmpeg
 
 ```
 wget https://yt-dl.org/downloads/latest/youtube-dl -O /usr/local/bin/youtube-d
-chmod a+rx /usr/local/bin/youtube-dl
+chmod a&#43;rx /usr/local/bin/youtube-dl
 ```
 
 ## 使用 youtube-dl
@@ -88,12 +88,12 @@ youtube-dl -f 22 https://www.youtube.com/watch?v=IW_kWtI9EUg
  1080p 视频和音频是分开的，可以看到有些格式带有 `video only` ，有些带有 `audio only ` ，选两个你自己喜欢的组合吧。比如我要下载 **1080p / mp4** 的视频和 **128k / m4a** 的音频，他们的 `id` 分别是 `137` 和 `140` ，那么使用：
 
 ```
-youtube-dl -f 137+140 https://www.youtube.com/watch?v=IW_kWtI9EUg
+youtube-dl -f 137&#43;140 https://www.youtube.com/watch?v=IW_kWtI9EUg
 ```
 
 youtube-dl 就用下载这两个视频和音频并调用 FFmpeg 合成为一个文件，并删除原来两个视频和音频。
 
-小提示：`mp4 + m4a` 会合成为一个 `mp4` 文件， `mp4 + webm` 会兼容合成为 `.mkv` 文件，一般为了方便视频以后上传什么的我都选择 `mp4 + m4a` 组合。
+小提示：`mp4 &#43; m4a` 会合成为一个 `mp4` 文件， `mp4 &#43; webm` 会兼容合成为 `.mkv` 文件，一般为了方便视频以后上传什么的我都选择 `mp4 &#43; m4a` 组合。
 
 ## 拖回本地
 

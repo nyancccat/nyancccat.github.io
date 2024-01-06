@@ -24,12 +24,12 @@ npm install
 然后试一下。
 
 ```bash
-hexo g && hexo s
+hexo g &amp;&amp; hexo s
 ```
 
 ```
 INFO  Start processing
-INFO  Hexo is running at http://localhost:4000/. Press Ctrl+C to stop.INFO  Start processing
+INFO  Hexo is running at http://localhost:4000/. Press Ctrl&#43;C to stop.INFO  Start processing
 ```
 
 没报错，只出现几个 WARN ，按照关键字搜索了一下大致是我的 node.js 版本高了，我用的 6.3.1，建议换成 5.x，避免不必要的麻烦。
@@ -46,7 +46,7 @@ hexo s -p 4444
 
 ```
 INFO  Start processing
-INFO  Hexo is running at http://localhost:4444/. Press Ctrl+C to stop.
+INFO  Hexo is running at http://localhost:4444/. Press Ctrl&#43;C to stop.
 ```
 
 再刷新就没问题了，看来是端口被占用了。
@@ -55,13 +55,13 @@ INFO  Hexo is running at http://localhost:4444/. Press Ctrl+C to stop.
 看看是什么在占用，Windows 下：
 
 ```
-netstat -aon|findstr "4000"
+netstat -aon|findstr &#34;4000&#34;
 ```
 
 LISTENING 后面的数字是 `pid`
 
 ```
-tasklist|findstr "pid"
+tasklist|findstr &#34;pid&#34;
 ```
 
 一个 `FoxitProtect.exe` 在占用，是前几天装的的 福昕PDF阅读器，直接卸载掉。
@@ -76,7 +76,7 @@ tasklist|findstr "pid"
 
 ```
 events.js:141
-      throw er; // Unhandled 'error' event
+      throw er; // Unhandled &#39;error&#39; event
       ^
 ```
 
@@ -98,7 +98,7 @@ Bytes: 0xE5 0x89 0x8D 0xE8
 Below is a rendering of the page up to the first error.
 ```
 
-搜索了下 大致是 rss 页面含有隐藏的字符，或者由于 CDATA 的结束符号是“]]>”，所以CDATA中不能包含“]]>”，由于 CDATA 中的所有标记、实体引用都被忽略，所以 CDATA 不能嵌套使用等原因，懒得搞了，先禁止掉。
+搜索了下 大致是 rss 页面含有隐藏的字符，或者由于 CDATA 的结束符号是“]]&gt;”，所以CDATA中不能包含“]]&gt;”，由于 CDATA 中的所有标记、实体引用都被忽略，所以 CDATA 不能嵌套使用等原因，懒得搞了，先禁止掉。
 
 ## 总结
 

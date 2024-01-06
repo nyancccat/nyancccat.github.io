@@ -32,13 +32,13 @@ uname -a
 
 ## 什么是 BBR？
 
-> TCP BBR 是 Google 出品的 TCP 拥塞控制算法。BBR 目的是要尽量跑满带宽，并且尽量不要有排队的情况。BBR 可以起到单边加速 TCP 连接的效果。
+&gt; TCP BBR 是 Google 出品的 TCP 拥塞控制算法。BBR 目的是要尽量跑满带宽，并且尽量不要有排队的情况。BBR 可以起到单边加速 TCP 连接的效果。
 
 用的还是秋大的 [一键安装最新内核并开启 BBR 脚本](https://teddysun.com/489.html)：
 
 ```
 wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh
-chmod +x bbr.sh
+chmod &#43;x bbr.sh
 ./bbr.sh
 ```
 完成后按 `Y` 重启。
@@ -81,25 +81,25 @@ lsmod | grep bbr
 
 @update 2017.7.1 终于抽空装了 SSR，非高峰期，有土鳖 1080P 下，大概就是这个速度，1080P 勉强，有时候要缓冲，720P 没什么问题。
 
-截图来至 [和楽器バンド / 「起死回生」6/21発売「和楽器バンド大新年会2017](https://www.youtube.com/watch?v=h8Q85IpwCP4&list=RD6lp4Iw1AbgA&index=2) 
+截图来至 [和楽器バンド / 「起死回生」6/21発売「和楽器バンド大新年会2017](https://www.youtube.com/watch?v=h8Q85IpwCP4&amp;list=RD6lp4Iw1AbgA&amp;index=2) 
 
 蜷川べに （津軽三味線）
 
-![ssr-cs](ssr-cs.gif "ssr-cs")
+![ssr-cs](ssr-cs.gif &#34;ssr-cs&#34;)
 
-晚上有点不太满意，搜索了下，发现论坛好多人用的魔改版，试一下，用的是这个一键包：[Debian/Ubuntu TCP BBR 改进版/增强版](https://moeclub.org/2017/06/24/278/)，貌似只支持 **Debian8 / Ubuntu16 +**。
+晚上有点不太满意，搜索了下，发现论坛好多人用的魔改版，试一下，用的是这个一键包：[Debian/Ubuntu TCP BBR 改进版/增强版](https://moeclub.org/2017/06/24/278/)，貌似只支持 **Debian8 / Ubuntu16 &#43;**。
 
 ```
-wget --no-check-certificate -qO 'BBR.sh' 'https://moeclub.org/attachment/LinuxShell/BBR.sh' && chmod a+x BBR.sh && bash BBR.sh -f
+wget --no-check-certificate -qO &#39;BBR.sh&#39; &#39;https://moeclub.org/attachment/LinuxShell/BBR.sh&#39; &amp;&amp; chmod a&#43;x BBR.sh &amp;&amp; bash BBR.sh -f
 ```
 
 完成后运行：
 
 ```
-lsmod |grep 'bbr_powered'
+lsmod |grep &#39;bbr_powered&#39;
 ```
 
-返回 `bbr_powered'` 字样，则安装成功了。
+返回 `bbr_powered&#39;` 字样，则安装成功了。
 
 ---
 

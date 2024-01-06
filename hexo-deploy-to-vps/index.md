@@ -3,26 +3,26 @@
 
 ## 环境设定
 
-{{< admonition info >}}
+{{&lt; admonition info &gt;}}
 - 搬瓦工年付最便宜 $19.99  10G VPS，KVM 架构。 
 - VPS 操作系统 Ubuntu 16.04.2 LTS ，已开启 [Gooole TCP BBR](https://clearsky.me/ubuntu-bbr.html)。
 - 本地系统 Windows_NT 10.0.15063 win32 x64，已安装 Hexo 3.3.7，[Node.js](https://nodejs.org/zh-cn/) 版本 6.10.3。
 - SSH 连接管理软件 [Xshell 5](https://www.netsarang.com/products/xsh_overview.html)，本地终端 [Git for Windows](https://git-for-windows.github.io/index.html) 2.13。
-{{< /admonition >}}
+{{&lt; /admonition &gt;}}
 
 
 ## 方案选择
 
 传说中有 2 种方案：
 
-{{< admonition info >}}
+{{&lt; admonition info &gt;}}
 1.  在 VPS 安装配置 Hexo，完成后 `hexo server` 让它本地运行，之后通过配置 Nginx 让域名指向  `http://localhost:4000` 。
 2.  本地安装配置 Hexo，生成静态文件，然后 `git hook` 或者 `rsync` 这类方式部署到 VPS，Nginx 作为 Web 服务器解析。
-{{< /admonition >}}
+{{&lt; /admonition &gt;}}
 
-{{< admonition >}}
+{{&lt; admonition &gt;}}
 **因为我以前一直是本地生成静态文件部署到 github 或者 coding 上的，显然第二种方案适合我，在这里使用的是`git hook` 方式部署，因为 Google 搜索出来大多是这种方式，文章多，容易解决问题。**
-{{< /admonition >}}
+{{&lt; /admonition &gt;}}
 
 ## 安装 Git 和 Nginx
 
@@ -56,7 +56,7 @@ nano /etc/sudoers
 
 在如下图位置添加 `git  ALL=(ALL:ALL) ALL`：
 
-![etc_sudoers](etc_sudoers.jpg "etc_sudoers")
+![etc_sudoers](etc_sudoers.jpg &#34;etc_sudoers&#34;)
 
 之后保存，记得把权限改回来
 
@@ -64,9 +64,9 @@ nano /etc/sudoers
 chmod 440 /etc/sudoers
 ```
 
-{{< admonition >}}
+{{&lt; admonition &gt;}}
 **输入密码不可见，也无星号提示，输入一次，回车，再输一次再回车就好了。身份信息直接一路回车默认就好了。觉得 vi 操作麻烦可以用 nano 来编辑，注意添加位置。**
-{{< /admonition >}}
+{{&lt; /admonition &gt;}}
 
 
 ### 上传本地 ssh 公钥
@@ -74,7 +74,7 @@ chmod 440 /etc/sudoers
 ```bash
 su git		# 切换至 git 用户
 cd ~
-mkdir .ssh && cd .ssh
+mkdir .ssh &amp;&amp; cd .ssh
 touch authorized_keys
 nano authorized_keys 
 ```
@@ -103,7 +103,7 @@ IdentityFile ~/.ssh/id_rsa
 
 ```bash
 cd ~
-mkdir hexo.git && cd hexo.git
+mkdir hexo.git &amp;&amp; cd hexo.git
 git init --bare
 ```
 
@@ -136,7 +136,7 @@ cp -rf ${TMP_GIT_CLONE}/* ${PUBLIC_WWW}
 并赋予权限
 
 ```bash
-chmod +x post-receive
+chmod &#43;x post-receive
 ```
 
 至此，VPS Git 配置完成。记下来是 Nginx。
@@ -160,12 +160,12 @@ server {
   access_log  /var/log/nginx/hexo_access.log;
   error_log   /var/log/nginx/hexo_error.log;
   error_page 404 =  /404.html;
-  location ~* ^.+\.(ico|gif|jpg|jpeg|png)$ {
+  location ~* ^.&#43;\.(ico|gif|jpg|jpeg|png)$ {
     root /var/www/hexo;
     access_log   off;
     expires      1d;
   }
-  location ~* ^.+\.(css|js|txt|xml|swf|wav)$ {
+  location ~* ^.&#43;\.(css|js|txt|xml|swf|wav)$ {
     root /var/www/hexo;
     access_log   off;
     expires      10m;
@@ -203,7 +203,7 @@ deploy:
 
 和往常一样，`hexo g -d` ，看了一下没问题了。
 
-![git-vps](git-vps.jpg "git-vps")
+![git-vps](git-vps.jpg &#34;git-vps&#34;)
 
 先吃饭，回来再添加下 SSL 证书。
 

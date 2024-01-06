@@ -34,26 +34,26 @@
     #你要修改的地方从这里结束
 
     #定义数据库的名字和旧数据库的名字
-    DataBakName=Data_$(date +"%Y%m%d").tar.gz
-    WebBakName=Web_$(date +%Y%m%d).tar.gz
-    OldData=Data_$(date -d -5day +"%Y%m%d").tar.gz
-    OldWeb=Web_$(date -d -5day +"%Y%m%d").tar.gz
+    DataBakName=Data_$(date &#43;&#34;%Y%m%d&#34;).tar.gz
+    WebBakName=Web_$(date &#43;%Y%m%d).tar.gz
+    OldData=Data_$(date -d -5day &#43;&#34;%Y%m%d&#34;).tar.gz
+    OldWeb=Web_$(date -d -5day &#43;&#34;%Y%m%d&#34;).tar.gz
     #删除本地3天前的数据
-    rm -rf /home/backup/Data_$(date -d -3day +"%Y%m%d").tar.gz /home/backup/Web_$(date -d -3day +"%Y%m%d").tar.gz
+    rm -rf /home/backup/Data_$(date -d -3day &#43;&#34;%Y%m%d&#34;).tar.gz /home/backup/Web_$(date -d -3day &#43;&#34;%Y%m%d&#34;).tar.gz
     cd /home/backup
     #导出数据库,一个数据库一个压缩文件
-    for db in `/usr/local/mysql/bin/mysql -u$MYSQL_USER -p$MYSQL_PASS -B -N -e 'SHOW DATABASES' | xargs`; do
-        (/usr/local/mysql/bin/mysqldump -u$MYSQL_USER -p$MYSQL_PASS ${db} | gzip -9 - > ${db}.sql.gz)
+    for db in `/usr/local/mysql/bin/mysql -u$MYSQL_USER -p$MYSQL_PASS -B -N -e &#39;SHOW DATABASES&#39; | xargs`; do
+        (/usr/local/mysql/bin/mysqldump -u$MYSQL_USER -p$MYSQL_PASS ${db} | gzip -9 - &gt; ${db}.sql.gz)
     done
     #压缩数据库文件为一个文件
     tar zcf /home/backup/$DataBakName /home/backup/*.sql.gz
     rm -rf /home/backup/*.sql.gz
     #发送数据库到Email,如果数据库压缩后太大,请注释这行
-    echo "主题:数据库备份" | mutt -a /home/backup/$DataBakName -s "内容:数据库备份" $MAIL_TO
+    echo &#34;主题:数据库备份&#34; | mutt -a /home/backup/$DataBakName -s &#34;内容:数据库备份&#34; $MAIL_TO
     #压缩网站数据
     tar zcf /home/backup/$WebBakName $WEB_DATA
     #上传到FTP空间,删除FTP空间5天前的数据
-    ftp -v -n $FTP_IP << END
+    ftp -v -n $FTP_IP &lt;&lt; END
     user $FTP_USER $FTP_PASS
     type binary
     cd $FTP_backup

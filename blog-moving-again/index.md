@@ -11,7 +11,7 @@
 月流量：4000MB
 建站数：2个
 MySQL：共享空间大小
-DirectAdmin中文面板PHP+MySQL
+DirectAdmin中文面板PHP&#43;MySQL
 
 |   项目  |   参数  |
 |   --------    |   -----:  |
@@ -19,7 +19,7 @@ DirectAdmin中文面板PHP+MySQL
 |   月流量       | 4000MB  |
 |   建站数       | 2个  |
 |   MySQL      |    共享空间大小  |
-|   DirectAdmin中文面板PHP+MySQL    |   *   |
+|   DirectAdmin中文面板PHP&#43;MySQL    |   *   |
 
 霓虹国机房，所以访问速度算是不错了，ping值各地80~120，200MB空间(与数据库共享大小），月流量4G，看似很小，但是对这里来说足够了，适用就行。多了用不完也浪费。
 

@@ -50,7 +50,7 @@
 
 最终买的是这货：
 
-![京东- 货物图片](jd-omen3.jpg "京东- 货物图片")
+![京东- 货物图片](jd-omen3.jpg &#34;京东- 货物图片&#34;)
  
 和我需求符合，17 寸大屏虽然是不 144 Hz的，毕竟又不是专门买来玩 FPS 游戏的，GTX 1070 虽然是移动框架，但估计也比GTX 1060 强点吧。
 
@@ -64,7 +64,7 @@
 | 显卡| NVIDIA GeForce GTX 1070 |
 | 显存容量 |  独立8GB  |
 | 显存类型 |  GDDR5  |
-| 硬盘容量 |   固态硬盘 / KXG50ZNV256G TOSHIBA (256GB) + 机械硬盘 HGST HTS721010A9E630 (1.0TB) 7200 转/分钟   |
+| 硬盘容量 |   固态硬盘 / KXG50ZNV256G TOSHIBA (256GB) &#43; 机械硬盘 HGST HTS721010A9E630 (1.0TB) 7200 转/分钟   |
 | 主板 |  8393 (40.21)  |
 | 网卡 |   1、Realtek Gaming GBE Family Controller 2、Realtek RTL8822BE 802.11ac PCIe Adapter   |
 | 声卡 |  1、USB Audio Class 1.0 and 2.0 Device Driver 2、Realtek High Definition Audio 3、NVIDIA Virtual Audio Device (Wave Extensible) (WDM)  |
@@ -77,25 +77,25 @@
 
 过了 2 天，收到京东包裹：
 
-![京东包裹](omen3_0.jpg "京东包裹")
+![京东包裹](omen3_0.jpg &#34;京东包裹&#34;)
 
 拆开包装：
 
-![京东包裹](omen3_1.jpg "京东包裹")
+![京东包裹](omen3_1.jpg &#34;京东包裹&#34;)
 
 包装盒子和配件，砖头一样的电源：
 
-![京东包裹](omen3_2.jpg "京东包裹")
+![京东包裹](omen3_2.jpg &#34;京东包裹&#34;)
 
-![京东包裹](omen3_3.jpg "京东包裹")
+![京东包裹](omen3_3.jpg &#34;京东包裹&#34;)
 
 机身： 巫毒 LOGO 我很喜欢，有中国京剧脸谱的味道。
 
-![京东包裹](omen3_4.jpg "京东包裹")
+![京东包裹](omen3_4.jpg &#34;京东包裹&#34;)
 
 开机~
 
-![京东包裹](omen3_5.jpg "京东包裹]")
+![京东包裹](omen3_5.jpg &#34;京东包裹]&#34;)
 
 懒了，不想写了。。具体跑分什么的肯定不搞了，意义不大，只能说用着挺爽，吃鸡全特效偶尔掉帧，高画质流畅丝滑。
 

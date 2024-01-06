@@ -18,15 +18,15 @@ dpkg-reconfigure exim4-config
 
 进入设置界面：局部马赛克~
 
-![exim4设置界面](2179408175.jpg "exim4设置界面")
+![exim4设置界面](2179408175.jpg &#34;exim4设置界面&#34;)
 
 这里，独立ip选第一个：
 
-![exim4设置界面-1](4164473875.jpg "exim4设置界面-1")
+![exim4设置界面-1](4164473875.jpg &#34;exim4设置界面-1&#34;)
 
 这里。系统邮件名称，设置成自己的。
 
-![exim4设置界面-1](860879479.jpg "exim4设置界面-1")
+![exim4设置界面-1](860879479.jpg &#34;exim4设置界面-1&#34;)
 
 至于其余的，一路按回车键默认。
 
@@ -38,7 +38,7 @@ dpkg-reconfigure exim4-config
 
 在这里出现了点问题，提示是：
 
-    > ALERT: exim paniclog /var/log/exim4/paniclog has non-zero size, mail system possibly broken … failed!
+    &gt; ALERT: exim paniclog /var/log/exim4/paniclog has non-zero size, mail system possibly broken … failed!
 
 以这段为关键字google搜索了一下，满屏幕的英文里面终于找到个中文的答案。
 
@@ -56,14 +56,14 @@ rm /var/log/exim4/paniclog #删除log。
 
 安装成功，测试下发送mail,右下角本来就开着QQ，直接发送到QQ邮件好了:
 
-直接用mail命令，发送一封主题为"test" ，内容为"hello world! fuck xxx!!!"的邮件。
+直接用mail命令，发送一封主题为&#34;test&#34; ，内容为&#34;hello world! fuck xxx!!!&#34;的邮件。
 一个小点.然后回车键。
 
-![发送邮件测试](1310163206.jpg "发送邮件测试")
+![发送邮件测试](1310163206.jpg &#34;发送邮件测试&#34;)
 
 右下角企鹅没有弹出邮件，很正常，这种肯定在垃圾邮件列表中：
 
-![垃圾邮件](1138044468.jpg "垃圾邮件")
+![垃圾邮件](1138044468.jpg &#34;垃圾邮件&#34;)
 
 完了~
 

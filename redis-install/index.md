@@ -3,16 +3,16 @@
 
 ### Redis 简介
 
-{{< admonition type=abstract title="Redis 是什么？" open=true >}}
+{{&lt; admonition type=abstract title=&#34;Redis 是什么？&#34; open=true &gt;}}
 
 REmote DIctionary Server(Redis) 是一个由 Salvatore Sanfilippo 写的 key-value 存储系统，是跨平台的非关系型数据库。
 
 Redis 是一个开源的使用 ANSI C 语言编写、遵守 BSD 协议、支持网络、可基于内存、分布式、可选持久性的键值对(Key-Value)存储数据库，并提供多种语言的 API。
 
 Redis 通常被称为数据结构服务器，因为值（value）可以是字符串(String)、哈希(Hash)、列表(list)、集合(sets)和有序集合(sorted sets)等类型。
-{{< /admonition >}}
+{{&lt; /admonition &gt;}}
 
-{{< admonition type=info title="Redis 的特点" open=true >}}
+{{&lt; admonition type=info title=&#34;Redis 的特点&#34; open=true &gt;}}
 
 性能极高 – Redis 能读的速度是 110000 次/s,写的速度是 81000 次/s。
 
@@ -22,7 +22,7 @@ Redis 通常被称为数据结构服务器，因为值（value）可以是字符
 
 丰富的特性 – Redis 还支持 publish/subscribe, 通知, key 过期等等特性。
 
-{{< /admonition >}}
+{{&lt; /admonition &gt;}}
 
 ### Redis 相关资源
 
@@ -40,7 +40,7 @@ Redis 基于 C ,先安装所需要的 gcc 依赖，`root `登录 CentOS，安装
 yum install -y gcc tcl
 ```
 
-发文时候官网最新 7.0.5 版本，--> [Download 7.0.5](https://github.com/redis/redis/archive/7.0.5.tar.gz) ，下载后上传放至 CentOS `/usr/local/src` 目录，解压：
+发文时候官网最新 7.0.5 版本，--&gt; [Download 7.0.5](https://github.com/redis/redis/archive/7.0.5.tar.gz) ，下载后上传放至 CentOS `/usr/local/src` 目录，解压：
 
 ```bash
 tar -zxvf redis-7.0.5.tar.gz
@@ -55,7 +55,7 @@ cd redis-7.0.5
 编译：
 
 ```bash
-make && make install
+make &amp;&amp; make install
 ```
 
 完成安装，默认的安装路径是在`/usr/local/bin`目录下，运行：
@@ -64,7 +64,7 @@ make && make install
 redis-server
 ```
 
-![安装完成启动 Redis](redis.jpg '安装完成启动 Redis')
+![安装完成启动 Redis](redis.jpg &#39;安装完成启动 Redis&#39;)
 
 ### Redis 配置
 
@@ -76,7 +76,7 @@ vi redis.conf
 
 修改这些：
 
-{{< admonition type=info title="" open=true >}}
+{{&lt; admonition type=info title=&#34;&#34; open=true &gt;}}
 
 #允许访问的地址，默认是 127.0.0.1，会导致只能在本地访问。修改为 0.0.0.0 则可以在任意 IP 访问，为了方便设置为 0.0.0.0，正式环境请勿这样使用。
 
@@ -94,7 +94,7 @@ daemonize yes
 
 requirepass pass
 
-{{< /admonition >}}
+{{&lt; /admonition &gt;}}
 
 修改后 `:wq` 保存。
 
@@ -166,7 +166,7 @@ systemctl status redis          # 查看状态
 
 最后截个图 ：
 
-![Another-Redis-Desktop-Manager](Another-Redis-Desktop-Manager.png 'Another-Redis-Desktop-Manager')
+![Another-Redis-Desktop-Manager](Another-Redis-Desktop-Manager.png &#39;Another-Redis-Desktop-Manager&#39;)
 
 
 ---

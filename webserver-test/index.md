@@ -15,9 +15,9 @@ Sigeg官方主页：[http://www.joedog.org/siege-home/](http://www.joedog.org/si
 
 官方说明：直接引用官方一堆蝌蚪文~
 
-> What Is It?
->
-> Siege is an open source stress / regression test and benchmark utility. It can stress a single URL with a user defined number of simulated users or it can read many URLs into memory and stress them simultaneously. The program reports the total number of hits recorded, bytes transferred, response time, concurrency, and return status. Most features are configurable with command line options which also include default values to minimize the complexity of the program’s invocation. Siege allows you to stress a web server with n number of users t number of times, where n and t are defined by the user. It records the duration time of the test as well as the duration of each single transaction. It reports the number of transactions, elapsed time, bytes transferred, response time, transaction rate, concurrency and the number of times the server responded OK, that is status code 200\. Siege was designed and implemented by Jeffrey Fulmer in his position as Webmaster for Armstrong World Industries. It was modeled in part after Lincoln Stein’s torture.pl and it’s data reporting is almost identical. But torture.pl does not allow one to stress many URLs simultaneously; out of that need siege was born… When a httpd server is being hit by the program, it is said to be “under siege.”
+&gt; What Is It?
+&gt;
+&gt; Siege is an open source stress / regression test and benchmark utility. It can stress a single URL with a user defined number of simulated users or it can read many URLs into memory and stress them simultaneously. The program reports the total number of hits recorded, bytes transferred, response time, concurrency, and return status. Most features are configurable with command line options which also include default values to minimize the complexity of the program’s invocation. Siege allows you to stress a web server with n number of users t number of times, where n and t are defined by the user. It records the duration time of the test as well as the duration of each single transaction. It reports the number of transactions, elapsed time, bytes transferred, response time, transaction rate, concurrency and the number of times the server responded OK, that is status code 200\. Siege was designed and implemented by Jeffrey Fulmer in his position as Webmaster for Armstrong World Industries. It was modeled in part after Lincoln Stein’s torture.pl and it’s data reporting is almost identical. But torture.pl does not allow one to stress many URLs simultaneously; out of that need siege was born… When a httpd server is being hit by the program, it is said to be “under siege.”
 
 
 最新版本下载地址：[http://download.joedog.org/siege/siege-latest.tar.gz](http://download.joedog.org/siege/siege-latest.tar.gz)
@@ -44,7 +44,7 @@ tar zxvf siege-latest.tar.gz
 ```bash
 cd siege-3.0.6
 ./configure
-make && make installl
+make &amp;&amp; make installl
 #进入siege-3.0.6目录并编译安装
 ```
 
@@ -82,7 +82,7 @@ siege https://clearsky.me -c 100 -t 3    #并发数100，持续3分钟
 
 实时感受，打开网站基本没什么变化,没明显感觉慢，最后完成后出现了个：
 
->[error]unable to create log file: No such file or directory
+&gt;[error]unable to create log file: No such file or directory
 
 如果出现这个问题直接在`/usr/local`目录下新建个`var`目录就可以了，
 
@@ -111,11 +111,11 @@ siege https://clearsky.me -c 500 -t 5    #并发数500，持续5分钟
 
 出现：
 
->[fatal] unable to allocate memory for 500 simulated browser: Cannot allocate memory
+&gt;[fatal] unable to allocate memory for 500 simulated browser: Cannot allocate memory
 
 搜索了一下：找到这样解释：via:[Siege使用笔记](http://www.iteye.com/topic/1123465)
 
-> 性能测试过程中，当并发数达到一定情况下可能会遇到“FATAL: unable to allocate memory for ** simulated browser: Cannot allocate memory”类似错误，这是由于linux系统配置限制导致的，可通过"ulimit -a"查看, 修改参数来进行调试（但总会受限于硬件设备）
+&gt; 性能测试过程中，当并发数达到一定情况下可能会遇到“FATAL: unable to allocate memory for ** simulated browser: Cannot allocate memory”类似错误，这是由于linux系统配置限制导致的，可通过&#34;ulimit -a&#34;查看, 修改参数来进行调试（但总会受限于硬件设备）
 
 于是我减小到300，感觉打开已经很慢了，卡卡的，测试结果如下：
 
@@ -143,17 +143,17 @@ Shortest transaction:	        0.02            //每次最短时间
 下载地址：[https://httpbench.googlecode.com/files/httpbench-0.11.tar.gz](https://httpbench.googlecode.com/files/httpbench-0.11.tar.gz)
 
 官方简单说明：
-> Requirement:
->
-> linux with kernel 2.6 or higher
->
-> Install:
->
-> make && make install
->
-> Usage:
->
-> httpbench thread-numbers url
+&gt; Requirement:
+&gt;
+&gt; linux with kernel 2.6 or higher
+&gt;
+&gt; Install:
+&gt;
+&gt; make &amp;&amp; make install
+&gt;
+&gt; Usage:
+&gt;
+&gt; httpbench thread-numbers url
 
 先是下载安装，root登陆终端后：
 
@@ -169,7 +169,7 @@ tar zxvf httpbench-0.11.tar.gz
 ### 进入目录并安装
 ```bash
 cd httpbench
-make && make install
+make &amp;&amp; make install
 ```
 
 ### 完成后测试
@@ -178,7 +178,7 @@ make && make install
 httpbench 200 https://clearsky.me/    #不要忘了后面的斜杠“/”
 ```
 
-运行之后随时`Ctrl + C`终止，终止后就看到简单的数据：
+运行之后随时`Ctrl &#43; C`终止，终止后就看到简单的数据：
 
 ```bash
 Speed=83323 pages/min, 452984 bytes/sec.

@@ -16,11 +16,11 @@
 2018.3.28更新：添加如下代码：
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.css">
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.css&#34;&gt;
 ```
 
 ```javascript
-<script src="https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.js"></script>
+&lt;script src=&#34;https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.js&#34;&gt;&lt;/script&gt;
 ```
 
 继续编辑同目录下的 `footer.swig`，引入 aplayer.js
@@ -29,7 +29,7 @@
 2018.3.28更新：添加如下代码：
 
 ```javascript
-<script src="https://cdn.jsdelivr.net/npm/meting@1.1.0/dist/Meting.min.js"></script>
+&lt;script src=&#34;https://cdn.jsdelivr.net/npm/meting@1.1.0/dist/Meting.min.js&#34;&gt;&lt;/script&gt;
 ```
 当然也可以把 js 文件保存下来，自行引入地址，至此完成！
 
@@ -38,12 +38,12 @@
 在文章中想要添加歌曲的位置使用如下代码：
 
 ```html
-<div class="aplayer" data-id="22773511" data-server="netease" data-type="song" data-mode="single"></div>
+&lt;div class=&#34;aplayer&#34; data-id=&#34;22773511&#34; data-server=&#34;netease&#34; data-type=&#34;song&#34; data-mode=&#34;single&#34;&gt;&lt;/div&gt;
 ```
 
 上面的效果如下：
 
-<div class="aplayer" data-id="22773511" data-server="netease" data-type="song" data-mode="single"></div>
+&lt;div class=&#34;aplayer&#34; data-id=&#34;22773511&#34; data-server=&#34;netease&#34; data-type=&#34;song&#34; data-mode=&#34;single&#34;&gt;&lt;/div&gt;
 
 ## 常用参数
 
@@ -63,7 +63,7 @@ https://aplayer.js.org/docs/#/?id=options
 
 最近在整理后摇歌单，扔个歌单，我的网易云音乐账号[@u0defined](http://music.163.com/#/user/home?id=64357308)，欢迎交流。
 
-{{< music auto="https://music.163.com/#/playlist?id=864701453" >}}
+{{&lt; music auto=&#34;https://music.163.com/#/playlist?id=864701453&#34; &gt;}}
 
 ---
 

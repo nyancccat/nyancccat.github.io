@@ -1,7 +1,7 @@
 # 使用 Dota Mods Installer 替换 Dota2 模型
 
 
-![ti7](ti7.jpg  "ti7")
+![ti7](ti7.jpg  &#34;ti7&#34;)
 
 TI7 刚落下帷幕，恭喜 Team Liquid 获得冠军，虽然中国队还是没能打破奇数年魔咒夺冠，但是包揽二三四五名成绩也挺不错的。希望 B 神能再战一年，kky 都坚持到夺冠了，你没理由放弃的 。
 
@@ -11,19 +11,19 @@ TI7 刚落下帷幕，恭喜 Team Liquid 获得冠军，虽然中国队还是没
 
 用的是 [Dota Mods Installer]( https://dota2mods.com/)，使用了一下，真的如官方所说：
 
-> Manage your DOTA Mods easily.
+&gt; Manage your DOTA Mods easily.
 
 使用方法真的很简单，下载安装后发现还支持中文。打开它会自动读取 Steam 和 Dota2 文件路径，只需要选择你想要的模型保存就好了。
 
-![dota-mods-installer](dota-mods-installer.jpg "dota-mods-installer")
+![dota-mods-installer](dota-mods-installer.jpg &#34;dota-mods-installer&#34;)
 
 比如先来个影魔至宝：
 
-![dota-mods-installer](dota-mods-installer.gif "dota-mods-installer")
+![dota-mods-installer](dota-mods-installer.gif &#34;dota-mods-installer&#34;)
 
 保存后进入游戏，如图：看着舒服多了。
 
-![sf](sf.jpg "sf")
+![sf](sf.jpg &#34;sf&#34;)
 
 明天上班，早点睡~
 
