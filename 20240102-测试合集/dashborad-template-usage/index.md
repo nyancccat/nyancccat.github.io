@@ -72,5 +72,5 @@ export default {
 ---
 
 > 作者: [pagezen](http://clearsky.me/)  
-> URL: https://clearsky.me/20240101-%E6%B5%8B%E8%AF%95%E5%90%88%E9%9B%86/dashborad-template-usage/  
+> URL: https://clearsky.me/20240102-%E6%B5%8B%E8%AF%95%E5%90%88%E9%9B%86/dashborad-template-usage/  
 
