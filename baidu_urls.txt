@@ -1,4 +1,10 @@
 https://clearsky.me/vaultwarden/
+https://clearsky.me/20240101-%E6%B5%8B%E8%AF%95%E5%90%88%E9%9B%86/dashboard-summary/
+https://clearsky.me/20240101-%E6%B5%8B%E8%AF%95%E5%90%88%E9%9B%86/dashborad-widget-usage/
+https://clearsky.me/20240101-%E6%B5%8B%E8%AF%95%E5%90%88%E9%9B%86/dashborad-template-usage/
+https://clearsky.me/20240101-%E6%B5%8B%E8%AF%95%E5%90%88%E9%9B%86/dashborad-widget-docs/
+https://clearsky.me/20240101-%E6%B5%8B%E8%AF%95%E5%90%88%E9%9B%86/dashborad-template-docs/
+https://clearsky.me/20240101-%E6%B5%8B%E8%AF%95%E5%90%88%E9%9B%86/dashboard-analysis/
 https://clearsky.me/redis-install/
 https://clearsky.me/github-action-auto-build-deploy/
 https://clearsky.me/long-time-no-update/
