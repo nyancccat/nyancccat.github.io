@@ -7,21 +7,21 @@
 
 ## 需求
 
-- 自托管控制：能够保持对密码管理器基础设施的完全控制，托管在您自己的服务器或受信任的云服务上，确保您的敏感数据保留在您的手中。
-- 跨平台可用性：支持多种平台，包括 Windows、macOS、Linux、iOS 和 Android。可以从台式计算机、笔记本电脑和移动设备方便地访问您的密码和安全信息。
-- 加密安全：采用最先进的加密技术。确保密码和敏感信息在安全传输并存储在服务器上进行本地加密。
-- 支持浏览器扩展：为浏览器提供浏览器扩展，提供用户友好的体验。
+-   自托管控制：能够保持对密码管理器基础设施的完全控制，托管在您自己的服务器或受信任的云服务上，确保您的敏感数据保留在您的手中。
+-   跨平台可用性：支持多种平台，包括 Windows、macOS、Linux、iOS 和 Android。可以从台式计算机、笔记本电脑和移动设备方便地访问您的密码和安全信息。
+-   加密安全：采用最先进的加密技术。确保密码和敏感信息在安全传输并存储在服务器上进行本地加密。
+-   支持浏览器扩展：为浏览器提供浏览器扩展，提供用户友好的体验。
 
 ## Bitwarden
 
 先看了 Bitwarden，但是一看官网文档推荐安装配置：
 
-| System specifications | Minimum | Recommended |
-| :--- | :------: |:------: |
-| Processor |  x64, 1.4GHz | x64, 2GHz dual core |
-| Memory | 2GB RAM | 4GB RAM |
-| Storage | 12GB  | 25GB |
-| Docker Version | Engine 19&#43; and Compose 1.24&#43; | Engine 19&#43; and Compose 1.24&#43; |
+| System specifications |           Minimum            |         Recommended          |
+| :-------------------- | :--------------------------: | :--------------------------: |
+| Processor             |         x64, 1.4GHz          |     x64, 2GHz dual core      |
+| Memory                |           2GB RAM            |           4GB RAM            |
+| Storage               |             12GB             |             25GB             |
+| Docker Version        | Engine 19&#43; and Compose 1.24&#43; | Engine 19&#43; and Compose 1.24&#43; |
 
 再看看我手头上这台 VPS，1 核 1G 内存，硬盘才 16G，安装这个这个怕是太勉强了，果断放弃。
 
@@ -31,24 +31,24 @@ Vaultwarden 是一个使用 Rust 编写的非官方 Bitwarden 服务器实现，
 
 使用 Vaultwarden 这个第三方项目优势很明显：
 
-- 和官方服务拥有相同的安全性。
-- 可完美兼容 Bitwarden 全平台客户端。
-- 安装所需的系统环境门槛更低，运行消耗资源更少。
-- 完全免费，默认就有了官方 Bitwarden 付费版的全部功能。
+-   和官方服务拥有相同的安全性。
+-   可完美兼容 Bitwarden 全平台客户端。
+-   安装所需的系统环境门槛更低，运行消耗资源更少。
+-   完全免费，默认就有了官方 Bitwarden 付费版的全部功能。
 
 ### 安装
 
 关于 Vaultwarden 一些链接：
 
-- [Vaultwarden Github](https://github.com/dani-garcia/vaultwarden)
-- [Vaultwarden Docker Hub](https://hub.docker.com/r/vaultwarden/server)
-- [Vaultwarden Wiki](https://github.com/dani-garcia/vaultwarden/wiki)
+-   [Vaultwarden Github](https://github.com/dani-garcia/vaultwarden)
+-   [Vaultwarden Docker Hub](https://hub.docker.com/r/vaultwarden/server)
+-   [Vaultwarden Wiki](https://github.com/dani-garcia/vaultwarden/wiki)
 
 我使用的是 Docker 部署安装，之前的版本（v1.29.0 前）需要环境变量设置开启 WebSocket，主要是为了多端同步，安装时候要多开一个端口（默认是 3012）给 WebSocket 运行，自 Vaultwarden v1.29.0 之后的版本开始，WebSocket 默认启用，且不需要开设单独端口。
 
 我本身用着 1Panel 面板，直接新添加一个网站，绑定域名，如 `vw.yourdomain.com`,类型选择反向代理，代理端口 8087 （这个随意设置）。
 
-![反向代理设置](Reverse_proxy.webp &#39;Reverse_proxy&#39;)
+![反向代理设置](Reverse_proxy.webp &#34;Reverse_proxy&#34;)
 
 进入网站目录，拉取镜像执行。
 
@@ -69,7 +69,7 @@ docker run -d --name vaultwarden -v ./vw-data/:/data/ --restart unless-stopped -
 
 添加完证书打开 `vw.yourdomain.com`，就可以看到 Vaultwarden 登录界面了。
 
-![Vaultwarden 登录界面](vaultwarden-login.webp &#39;Vaultwarden 登录界面&#39;)
+![Vaultwarden 登录界面](vaultwarden-login.webp &#34;Vaultwarden 登录界面&#34;)
 
 ### Vaultwarden 设置
 
@@ -89,9 +89,9 @@ INVITATIONS_ALLOWED=false
 
 管理页面允许服务器管理员查看并删除所有已注册的用户，也可以在此界面设置一些如开启邀请、禁用注册等功能，我没有开启，感觉还不如设置环境变量方便。
 
-要启用管理页面，您需要设置一组身份验证令牌。该令牌可以是任何字符，但建议使用随机生成的长字符串，比如运行  `openssl rand -base64 48` 命令生成。
+要启用管理页面，您需要设置一组身份验证令牌。该令牌可以是任何字符，但建议使用随机生成的长字符串，比如运行 `openssl rand -base64 48` 命令生成。
 
-ADMIN_TOKEN=some_random_token_as_per_above_explanation 
+ADMIN_TOKEN=some_random_token_as_per_above_explanation
 
 然后在域名后面加上 `/admin`，就可以登录 Vaultwarden 管理后台，登陆验证为为刚刚设置的 `ADMIN_TOKEN`。
 
@@ -109,13 +109,13 @@ PUSH_INSTALLATION_KEY=xxx // 刚才得到的 KEY
 
 #### SMTP 配置
 
-SMTP_HOST=&lt;smtp.domain.tld&gt; 
+SMTP_HOST=&lt;smtp.domain.tld&gt;
 
-SMTP_FROM=&lt;vaultwarden@domain.tld&gt; 
+SMTP_FROM=&lt;vaultwarden@domain.tld&gt;
 
 SMTP_PORT=port
 
-SMTP_SECURITY=starttls 
+SMTP_SECURITY=starttls
 
 SMTP_USERNAME=username
 
@@ -127,17 +127,17 @@ SMTP_PASSWORD=password
 
 Vaultwarden 可完美兼容 Bitwarden 全平台客户端。所以直接使用 Bitwarden 的即可。
 
-- [Google Play](https://play.google.com/store/apps/details?id=com.x8bit.bitwarden)
-- [Apple Store](https://apps.apple.com/us/app/bitwarden-password-manager/id1137397744)
-- [Bitwarden 官方下载页](https://bitwarden.com/download/) 
-- [Google Chrome 应用商店](https://chromewebstore.google.com/detail/bitwarden-%E5%85%8D%E8%B4%B9%E5%AF%86%E7%A0%81%E7%AE%A1%E7%90%86%E5%99%A8/nngceckbapebfimnlniiiahkandclblb?pli=1)
-- [Microsoft Edge 应用商店](https://microsoftedge.microsoft.com/addons/detail/bitwarden-%E5%85%8D%E8%B4%B9%E5%AF%86%E7%A0%81%E7%AE%A1%E7%90%86%E5%99%A8/jbkfoedolllekgbhcbcoahefnbanhhlh)
+-   [Google Play](https://play.google.com/store/apps/details?id=com.x8bit.bitwarden)
+-   [Apple Store](https://apps.apple.com/us/app/bitwarden-password-manager/id1137397744)
+-   [Bitwarden 官方下载页](https://bitwarden.com/download/)
+-   [Google Chrome 应用商店](https://chromewebstore.google.com/detail/bitwarden-%E5%85%8D%E8%B4%B9%E5%AF%86%E7%A0%81%E7%AE%A1%E7%90%86%E5%99%A8/nngceckbapebfimnlniiiahkandclblb?pli=1)
+-   [Microsoft Edge 应用商店](https://microsoftedge.microsoft.com/addons/detail/bitwarden-%E5%85%8D%E8%B4%B9%E5%AF%86%E7%A0%81%E7%AE%A1%E7%90%86%E5%99%A8/jbkfoedolllekgbhcbcoahefnbanhhlh)
 
 ## Vaultwarden 使用
 
 日常使用和 LastPass 软件这类没什么区别，如我常用的浏览器扩展，登录时候选择自托管，输入绑定域名就可以了,设置个主密码就可以了。
 
-![浏览器扩展](vaultwarden-kz.webp &#39;vaultwarden-kz.webp&#39;)
+![浏览器扩展](vaultwarden-kz.webp &#34;vaultwarden-kz.webp&#34;)
 
 ## 导入 LastPass 密码库
 
@@ -153,13 +153,14 @@ Vaultwarden 可完美兼容 Bitwarden 全平台客户端。所以直接使用 Bi
 
 我密码数据大概 260&#43;，好多页面都打不开了，趁着有心情就整理一下分个类什么的，整理的时候发现 Vaultwarden 有一些工具，有个暴露检测，拿来试试。
 
-![Vaultwarden 工具](vaultwarden-tools.webp &#39;vaultwarden-tools.webp&#39;)
+![Vaultwarden 工具](vaultwarden-tools.webp &#34;vaultwarden-tools.webp&#34;)
 
 检测结果：
 
-![暴露密码检测报告](vaultwarden-report.webp &#39;vaultwarden-report.webp&#39;)
+![暴露密码检测报告](vaultwarden-report.webp &#34;vaultwarden-report.webp&#34;)
 
 抽空把一些比较重要的改一下吧，这次全部大小写字母 &#43; 数字 &#43; 特殊符号 &#43; 18 位数随机生成了。
+
 
 ---
 
