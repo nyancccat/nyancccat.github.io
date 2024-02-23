@@ -4,6 +4,6 @@
 
 ---
 
-> 作者: [pagezen](http://clearsky.me/)  
+> 作者:   
 > URL: https://clearsky.me/friends/  
 

@@ -81,6 +81,6 @@ E-MAIL: `aUBjbGVhcnNreS5tZWlAY2xlYXJza3kubWU=` (base 64)
 
 ---
 
-> 作者: [pagezen](http://clearsky.me/)  
+> 作者:   
 > URL: https://clearsky.me/about/  
 
