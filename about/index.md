@@ -46,6 +46,8 @@
 
 2023 年，未来还在继续。。。
 
+2024 年，未来仍还在继续。。。
+
 {{&lt; /admonition &gt;}}
 
 {{&lt; admonition type=info title=&#34;免责声明&#34; open=true &gt;}}
